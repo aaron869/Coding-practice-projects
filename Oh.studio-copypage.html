@@ -3,27 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <title>Oh.studio-copy</title>
     <style>
         :root {
             --white-color: #ffffff;
             --black-color: #000000;
             --grey-color: #7f7f7f;
+            --lighter-grey: #b8b8b8;
             --light-grey: #e8e5e480;
+            --SF: font-size: 300;
+            --LF: 400;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 10rem 1rem 4.8rem 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 1.3rem;
+            left: 0;
+            right: 0;
+        }
+        .inner-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2rem; 
+            justify-content: space-evenly; 
+            width: 18.5rem;
+            height: 3.2rem;
+            background-color: var(--light-grey);
+            backdrop-filter: blur(15px);
+        }
+        .internal-link:hover {
+            background-color: var(--white-color);
+        }
+        .internal-link {
+            padding: .7rem 1.5rem;
+            border-radius: 2rem;
+            color: var(--black-color);
+            text-decoration: none;
+            font-size: 15px;
+            
+        }
+        h2 {
+            text-align: center;
+            letter-spacing: -1px;
+            font-size: 35px;
+            width: 100%;
+            text-indent: 0px;
+            margin-bottom: 7rem;
+            font-weight: 500;
+        }
+        .sub-heading {
+           display: none;
+        }
+        .image-div {
+            display: flex;
+            gap: .1rem;
+            flex-direction: column;
+        }
+        .main-images {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image-div p {
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .image-div span {
+            color: var(--grey-color);
+            font-weight: 200;
+            font-size: 15px;
+        } 
+        .footer-header {
+            text-align: center;
+            line-height: .5rem;
+            font-size: 29px;
+            font-weight: 500;
+            margin: 6rem 0 10rem 0;
+        }
+        .get-in-touch-link:hover {
+            color:var(--lighter-grey);
+        }
+        .get-in-touch-link {
+            color: var(--grey-color);
+            text-decoration: none;
+        }
+        .bottom-of-footer {
+            text-align: center;
+            font-size: 14px;
+            line-height: .8rem;
+        }
+        .socials {
+            display: flex;
+            justify-content: center;           
+        } 
+        .external-links {
+            color: var(--black-color);
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+        .btn-div {
+            display: flex;
+            justify-content: center;
+        }
+        .shop-btn {
+            padding: .7rem 1.5rem .7rem 1.5rem;
+            border-radius: 2rem;
+            color: var(--white-color);
+            border: none;
+            font-size: 14px;
+            background-color: var(--black-color);
+            position: fixed;
+            bottom: 1.4rem;
         }
 
+        @media screen and (min-width: 810px) {
+            .sub-heading {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" class="internal-link">Home</a>
-        <a href="#" class="internal-link">Profile</a>
-        <a href="#" class="internal-link">Contact</a>
+        <div class="inner-nav">
+            <a href="#" class="internal-link">Home</a>
+            <a href="#" class="internal-link">Profile</a>
+            <a href="#" class="internal-link">Contact</a>
+        </div>
     </nav>
 
     <header>
         <h2>A barnd and product designer working with clients globally</h2>
-        <div>
+        <div class="sub-heading">
             <p>Expertise</p>
             <p>Branding</p>
             <p>Product</p>
@@ -32,31 +156,54 @@
     </header>
 
     <main>
-        <img src="images/first-card.webp" alt="img" width="200px" height="200px">
-        <img src="images/second-card.webp" alt="img" width="200px" height="200px">
-        <img src="images/third-card.webp" alt="img" width="200px" height="200px">
-        <img src="images/fourth-card.webp" alt="img" width="200px" height="200px">
-        <video src="https://framerusercontent.com/modules/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M~Jq48dGctHPeHtnn90xE_Aem-3HQJB_aNVwfu2fao5Ok.mp4" loop width="200px" height="200px"></video>
-        <img src="images/sixth-card.webp" alt="img" width="200px" height="200px">
-        <img src="images/seventh-card.webp" alt="img" width="200px" height="200px">
-        <video src="https://framerusercontent.com/modules/assets/SGjFvgcbK7s4yKh0xwuNjriMNII~5SCIlrVv6SNR5PFMjsMv3qAIi3sYsG2gjdlB0qM-tng.mp4" loop width="200px" height="200px"></video>
-        <img src="images/ninth-card.webp" alt="img" width="200px" height="200px">
-        <img src="images/tenth-card.webp" alt="img" width="200px" height="200px">
-        <img src="images/eleventh-card.webp" alt="img" width="200px" height="200px">
-        <video src="https://framerusercontent.com/modules/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg~DPEeC0jYyBwx9c865cOkUi-KzBM-3ukyhpgtPhvYo_U.mp4" loop width="200px" height="200px"></video>
+        <div class="image-div">
+            <img class="main-images" src="images/first-card.webp" alt="img" width="200px" height="200px">
+            <p>Aire</p>
+            <img class="main-images" src="images/second-card.webp" alt="img" width="200px" height="200px">
+            <p>Correlated</p>
+            <img class="main-images" src="images/third-card.webp" alt="img" width="200px" height="200px">
+            <p>Channel 5</p>
+            <img class="main-images" src="images/fourth-card.webp" alt="img" width="200px" height="200px">
+            <p>Ronald Abram</p>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M~Jq48dGctHPeHtnn90xE_Aem-3HQJB_aNVwfu2fao5Ok.mp4" loop width="200px" height="200px"></video>
+            <p>Propeller</p>
+            <img class="main-images" src="images/sixth-card.webp" alt="img" width="200px" height="200px">
+            <p>Schuh</p>
+            <img class="main-images" src="images/seventh-card.webp" alt="img" width="200px" height="200px">
+            <p>Paperstreet</p>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/SGjFvgcbK7s4yKh0xwuNjriMNII~5SCIlrVv6SNR5PFMjsMv3qAIi3sYsG2gjdlB0qM-tng.mp4" loop width="200px" height="200px"></video>
+            <p>OH>SUPPLY</p>
+            <img class="main-images" src="images/ninth-card.webp" alt="img" width="200px" height="200px">
+            <p>Monokel Eyewear</p>
+            <img class="main-images" src="images/tenth-card.webp" alt="img" width="200px" height="200px">
+            <p>Lawtrades &nbsp; <span>Coming Soon</span></p> 
+            <img class="main-images" src="images/eleventh-card.webp" alt="img" width="200px" height="200px">
+            <p>Baselworld &nbsp; <span>Coming Soon</span></p> 
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg~DPEeC0jYyBwx9c865cOkUi-KzBM-3ukyhpgtPhvYo_U.mp4" loop width="200px" height="200px"></video>
+            <p>NYCB</p>
+        </div>
     </main>
 
     <footer>
-        <p>Lets work together.</p>
-        <p>Get in touch.</p>
+        <div class="footer-header">
+            <p>Lets work together.</p>
+            <a class="get-in-touch-link" href="#">Get in touch.</a>
+        </div>
 
+        <div class="bottom-of-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" style="width: 30px; height: 30px; transform: translate3d(0px, 0px, 0px);" preserveAspectRatio="xMidYMid slice"><defs><clipPath id="__lottie_element_22"><rect width="800" height="800" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_22)"><g style="display: block;" transform="matrix(-0.11203348636627197,0.9937044382095337,-0.9937044382095337,-0.11203348636627197,400,400)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="27.301024660992223" d=" M-243.26100158691406,-243.22900390625 C-243.26100158691406,-243.22900390625 243.26100158691406,243.22900390625 243.26100158691406,243.22900390625 M-243.22999572753906,243.25999450683594 C-243.22999572753906,243.25999450683594 243.22999572753906,-243.26100158691406 243.22999572753906,-243.26100158691406 M-344.0010070800781,0.02199999988079071 C-344.0010070800781,0.02199999988079071 344.0010070800781,-0.02199999988079071 344.0010070800781,-0.02199999988079071 M-0.02199999988079071,-344 C-0.02199999988079071,-344 0.02199999988079071,344 0.02199999988079071,344"></path></g></g></svg>   
+            <p>© Oil Harris 2023</p>
 
-        <img src="" alt="">
-        <p>© Oil Harris 2023</p>
-
-        <a href="" class="external-links"></a>
-        <a href="" class="external-links"></a>
-        <a href="" class="external-links"></a>
+            <div class="socials">
+                <a href="#" class="external-links">Twitter</a>
+                <a href="#" class="external-links">Linkedin</a>
+                <a href="#" class="external-links">Mail</a>
+            </div>
+        </div>
     </footer>
+    
+    <div class="btn-div">
+        <button class="shop-btn">✽ &nbsp; Shop</button>
+    </div>
 </body>
 </html>
