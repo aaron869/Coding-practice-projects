@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card-project</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 7rem 1.5rem 2.5rem 1.5rem;
+            background-color: rgb(60, 60, 60);
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right:0;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        h1 {
+            margin: 0;
+            background-color: rgb(23, 23, 69);
+            color: rgb(231, 231, 231);
+            text-align: center;
+            font-size: 3rem;
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-decoration: underline;
+            background-color: rgb(206, 206, 206);
+            margin-top: 0;
+            padding: 0;
+            height: 2.5rem;
+        }
+        a, ul {
+            color:black;
+            list-style-type: none;
+        }
+        img {
+            border: 5px double rgb(0, 0, 0);
+            border-radius: 20rem;
+            max-width: 100%;
+            height: auto;
+        }
+        .card {
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 15px;
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(146, 146, 146);
+        }
+        .name {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+        .caption {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+        .F {
+            font-size: 1.2rem;
+        }
+        footer {
+            position: fixed;
+            color: rgb(198, 198, 198);
+            display: flex;
+            height: 2rem;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(23, 23, 69);
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        @media (min-width: 640px){
+        	nav{
+               display: none;
+            }
+        }
+        /* medium screen and up*/
+            @media (min-width: 768px){
+                body {
+                    padding: 7rem 2.5rem 2.5rem 2.5rem;
+                }
+                main {
+                flex-direction: row;
+                height: 40rem;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Our Staff</h1>
+    <nav>
+        <ul>
+            <li><a href="#Joe">Joe</a></li>
+            <li><a href="#Matt">Matt</a></li>
+            <li><a href="#Jane">Jane</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <div class="card" id="Joe">
+            <img src="images/profile1-500x500.png" alt="img" width="300px" height="300px">
+            <p class="name">Joe Coder</p>
+            <p class="caption">"I code stuff"</p>
+        </div>
+
+        <div class="card" id="Matt">
+            <img src="images/profile2-500x500.png" alt="img" width="300px" height="300px">
+            <p class="name">Matt Designer</p>
+            <p class="caption">"I Design stuff"</p>
+        </div>
+
+        <div class="card" id="Jane">
+            <img src="images/profile3-500x500.png" alt="img" width="300px" height="300px">
+            <p class="name">Jane Dev Rel</p>
+            <p class="caption">"I Teach stuff"</p>
+        </div>
+    </main>
+    <footer>
+        <p class="F">© Acme Co.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Results summary component</title>
+    <style>
+        body {
+            display: flex;
+            padding: 10rem 4.5rem;
+            font-family: 'Hanken Grotesk', sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+        .of {
+            color: rgb(169, 169, 169);
+            margin: 0;
+            font-size: .9rem;
+        }
+        p {
+            font-size: 18px;
+            color:hsl(0, 0%, 77%);
+        }
+        .left-side, .right-side {
+            height: 25rem;
+            max-width: 25rem;
+        }
+        .left-side {
+            border-radius: 25px;
+            width: 40rem;
+            padding: 1.8rem;
+            background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .right-side {
+            box-shadow: 7px 7px 20px hsla(241, 81%, 54%, 0.171);
+            border-radius: 0px 25px 25px 0px;
+            width: 42rem;
+            padding: 1.8rem 1.2rem 1.8rem 3.5rem;
+            margin-left: -1.5rem;
+        }
+        .circle {
+            background:linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5rem;
+            width: 10rem;
+            height: 10rem;
+            margin: 2rem 0px;
+        }
+        .result-num {
+            font-size: 4.5rem;
+            height: 5rem;
+            margin:0px;
+            color: white;
+            font-weight: bold;
+        }
+        .left-side h1 {
+            margin: 0;
+            color: rgb(207, 207, 207);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .score-overview {
+           text-align: center;
+           margin-top: 1rem;
+        }
+        .score-word-rate {
+            color:white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin:0px;
+        }
+
+        .right-flex {
+            display: flex;
+            flex-direction: column;
+        }
+        img {
+            width: 1.4rem;
+        }
+        .reaction, .memory, .verbal, .visual {
+            display: flex;
+            align-items: center;
+            font-size: .5rem;
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+            height: 3rem;
+            padding-left: 1rem;
+            padding-right: .8rem;
+            justify-content: space-between;
+        }
+        .right-side span {
+            color: hsl(224, 30%, 27%);
+        }
+        /*.sum-fraction {
+            margin-left: 6rem;
+          }
+        .sum-fraction-1 {
+            margin-left:5rem;
+        } */
+        .reaction {
+            background-color: hsla(0, 100%, 67%, 0.096);
+        }
+        .memory {
+            background-color: hsla(39, 100%, 56%, 0.096);
+        }
+        .verbal {
+            background-color:hsla(160, 100%, 50%, 0.144) ;
+        }
+        .visual {
+            background-color: hsla(234, 85%, 45%, 0.138);
+        }
+        button {
+            background-color:  hsl(224, 30%, 27%);
+            color: white;
+            padding: 1rem 1.5rem;
+            width: 100%;
+            border-radius: 2rem;
+            border: none;
+            margin-top: 1rem;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        section {
+            display: flex;
+            gap: 10px;
+        }
+        @media screen and (max-width: 576px) {
+            body {
+                flex-direction: column;
+                justify-content:auto;
+                align-items:auto;
+                margin: 0;
+                padding: 0;
+            }
+            .left-side, .right-side {
+                width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="left-side">
+        <h1>Your Result</h1>
+        <div class="circle">
+            <p class="result-num">76</p>
+            <p class="of">of 100</p>
+        </div>
+        <p class="score-word-rate">Great</p>
+        <p class="score-overview">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <div class="right-side">
+        <h2>Summary</h2>
+        <div class="right-flex">
+             <div class="reaction">   
+                <section><img src="/coding-projects/images/icon-memory.svg" alt="img">
+                <p style="color:hsl(0, 100%, 67%);">Reaction</p></section>
+                <p class="sum-fraction-1"><span>80</span> / 100</p>
+            </div>
+            <div class="memory">
+                <section><img src="/coding-projects/images/icon-reaction.svg" alt="img">
+                <p style="color:hsl(39, 100%, 56%);">Memory</p></section>
+                <p class="sum-fraction-1"><span>92</span> / 100</p>
+            </div>
+            <div class="verbal">
+                <section><img src="/coding-projects/images/icon-verbal.svg" alt="img">
+                <p style="color:hsl(166, 100%, 37%);">Verbal</p></section>
+                <p class="sum-fraction"><span>61</span> / 100</p>
+            </div>
+            <div class="visual">
+                <section><img src="/coding-projects/images/icon-visual.svg" alt="img" >
+                <p style="color:hsl(234, 85%, 45%);">Visual</p></section>
+                <p class="sum-fraction"><span>72</span> / 100</p>
+            </div>
+        </div>
+        <button>Continue</button>
+    </div>
+</body>
+</html>
