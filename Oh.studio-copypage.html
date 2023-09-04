@@ -64,8 +64,21 @@
             margin-bottom: 7rem;
             font-weight: 500;
         }
+        .gry-BG {
+            border-radius: 2rem;
+            padding: .5rem .8rem;
+            background-color: var(--light-grey);
+        }
+        .sub-heading p {
+            margin-left: .5rem;
+        }
         .sub-heading {
-           display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 9rem;
+            display: none;
         }
         .image-div {
             display: flex;
@@ -130,8 +143,45 @@
         }
 
         @media screen and (min-width: 810px) {
+            body {
+                padding: 10rem 2rem 0rem 2rem;
+            }
+            h2 {
+            font-size: 40px;
+            margin-bottom: 1rem;
+           }
+           .footer-header {
+            font-size: 36px;
+            margin: 9rem 0 0rem 0;
+            }
+            .copy-right {
+                display: flex;
+                align-items: center;
+            }
+            .copy-right svg {
+                margin-right: 10px;
+            }
             .sub-heading {
                 display: flex;
+            }
+            .img-title {
+                display: none;
+            }
+            .bottom-of-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 8rem;
+                margin-bottom: .8rem;
+            }
+            .main-images {
+                height: min(280px);
+            }
+            .image-div {
+                display: grid;
+                column-gap: 1.3rem;
+                row-gap: 2.5rem;
+                grid-template-columns: 1fr 1fr;
             }
         }
     </style>
@@ -146,41 +196,41 @@
     </nav>
 
     <header>
-        <h2>A barnd and product designer working with clients globally</h2>
+        <h2>A brand and product designer working with clients globally</h2>
         <div class="sub-heading">
             <p>Expertise</p>
-            <p>Branding</p>
-            <p>Product</p>
-            <p>Disign Systems</p>
+            <p class="gry-BG">Branding</p>
+            <p class="gry-BG">Product</p>
+            <p class="gry-BG">Disign Systems</p>
         </div>
     </header>
 
     <main>
         <div class="image-div">
             <img class="main-images" src="images/first-card.webp" alt="img" width="200px" height="200px">
-            <p>Aire</p>
+            <p class="img-title">Aire</p>
             <img class="main-images" src="images/second-card.webp" alt="img" width="200px" height="200px">
-            <p>Correlated</p>
+            <p class="img-title">Correlated</p>
             <img class="main-images" src="images/third-card.webp" alt="img" width="200px" height="200px">
-            <p>Channel 5</p>
+            <p class="img-title">Channel 5</p>
             <img class="main-images" src="images/fourth-card.webp" alt="img" width="200px" height="200px">
-            <p>Ronald Abram</p>
-            <video class="main-images" src="https://framerusercontent.com/modules/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M~Jq48dGctHPeHtnn90xE_Aem-3HQJB_aNVwfu2fao5Ok.mp4" loop width="200px" height="200px"></video>
-            <p>Propeller</p>
+            <p class="img-title">Ronald Abram</p>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M~Jq48dGctHPeHtnn90xE_Aem-3HQJB_aNVwfu2fao5Ok.mp4" loop muted width="200" height="200"></video>
+            <p class="img-title">Propeller</p>
             <img class="main-images" src="images/sixth-card.webp" alt="img" width="200px" height="200px">
-            <p>Schuh</p>
+            <p class="img-title">Schuh</p>
             <img class="main-images" src="images/seventh-card.webp" alt="img" width="200px" height="200px">
-            <p>Paperstreet</p>
-            <video class="main-images" src="https://framerusercontent.com/modules/assets/SGjFvgcbK7s4yKh0xwuNjriMNII~5SCIlrVv6SNR5PFMjsMv3qAIi3sYsG2gjdlB0qM-tng.mp4" loop width="200px" height="200px"></video>
-            <p>OH>SUPPLY</p>
+            <p class="img-title">Paperstreet</p>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/SGjFvgcbK7s4yKh0xwuNjriMNII~5SCIlrVv6SNR5PFMjsMv3qAIi3sYsG2gjdlB0qM-tng.mp4" loop width="200" height="200"></video>
+            <p class="img-title">OH.SUPPLY</p>
             <img class="main-images" src="images/ninth-card.webp" alt="img" width="200px" height="200px">
-            <p>Monokel Eyewear</p>
+            <p class="img-title">Monokel Eyewear</p>
             <img class="main-images" src="images/tenth-card.webp" alt="img" width="200px" height="200px">
-            <p>Lawtrades &nbsp; <span>Coming Soon</span></p> 
+            <p class="img-title">Lawtrades &nbsp; <span>Coming Soon</span></p> 
             <img class="main-images" src="images/eleventh-card.webp" alt="img" width="200px" height="200px">
-            <p>Baselworld &nbsp; <span>Coming Soon</span></p> 
-            <video class="main-images" src="https://framerusercontent.com/modules/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg~DPEeC0jYyBwx9c865cOkUi-KzBM-3ukyhpgtPhvYo_U.mp4" loop width="200px" height="200px"></video>
-            <p>NYCB</p>
+            <p class="img-title">Baselworld &nbsp; <span>Coming Soon</span></p> 
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg~DPEeC0jYyBwx9c865cOkUi-KzBM-3ukyhpgtPhvYo_U.mp4" loop width="200" height="200"></video>
+            <p class="img-title">NYCB</p>
         </div>
     </main>
 
@@ -191,8 +241,10 @@
         </div>
 
         <div class="bottom-of-footer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" style="width: 30px; height: 30px; transform: translate3d(0px, 0px, 0px);" preserveAspectRatio="xMidYMid slice"><defs><clipPath id="__lottie_element_22"><rect width="800" height="800" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_22)"><g style="display: block;" transform="matrix(-0.11203348636627197,0.9937044382095337,-0.9937044382095337,-0.11203348636627197,400,400)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="27.301024660992223" d=" M-243.26100158691406,-243.22900390625 C-243.26100158691406,-243.22900390625 243.26100158691406,243.22900390625 243.26100158691406,243.22900390625 M-243.22999572753906,243.25999450683594 C-243.22999572753906,243.25999450683594 243.22999572753906,-243.26100158691406 243.22999572753906,-243.26100158691406 M-344.0010070800781,0.02199999988079071 C-344.0010070800781,0.02199999988079071 344.0010070800781,-0.02199999988079071 344.0010070800781,-0.02199999988079071 M-0.02199999988079071,-344 C-0.02199999988079071,-344 0.02199999988079071,344 0.02199999988079071,344"></path></g></g></svg>   
-            <p>© Oil Harris 2023</p>
+            <div class="copy-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" style="width: 30px; height: 30px; transform: translate3d(0px, 0px, 0px);" preserveAspectRatio="xMidYMid slice"><defs><clipPath id="__lottie_element_22"><rect width="800" height="800" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_22)"><g style="display: block;" transform="matrix(-0.11203348636627197,0.9937044382095337,-0.9937044382095337,-0.11203348636627197,400,400)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(0,0,0)" stroke-opacity="1" stroke-width="27.301024660992223" d=" M-243.26100158691406,-243.22900390625 C-243.26100158691406,-243.22900390625 243.26100158691406,243.22900390625 243.26100158691406,243.22900390625 M-243.22999572753906,243.25999450683594 C-243.22999572753906,243.25999450683594 243.22999572753906,-243.26100158691406 243.22999572753906,-243.26100158691406 M-344.0010070800781,0.02199999988079071 C-344.0010070800781,0.02199999988079071 344.0010070800781,-0.02199999988079071 344.0010070800781,-0.02199999988079071 M-0.02199999988079071,-344 C-0.02199999988079071,-344 0.02199999988079071,344 0.02199999988079071,344"></path></g></g></svg>   
+                <p>© Oil Harris 2023</p>
+            </div>
 
             <div class="socials">
                 <a href="#" class="external-links">Twitter</a>
