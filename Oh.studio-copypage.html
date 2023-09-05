@@ -17,8 +17,6 @@
             --grey-color: #7f7f7f;
             --lighter-grey: #b8b8b8;
             --light-grey: #e8e5e480;
-            --SF: font-size: 300;
-            --LF: 400;
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -143,6 +141,10 @@
         }
 
         @media screen and (min-width: 810px) {
+            header {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
             body {
                 padding: 10rem 2rem 0rem 2rem;
             }
@@ -174,14 +176,21 @@
                 margin-top: 8rem;
                 margin-bottom: .8rem;
             }
-            .main-images {
-                height: min(280px);
-            }
             .image-div {
                 display: grid;
                 column-gap: 1.3rem;
                 row-gap: 2.5rem;
                 grid-template-columns: 1fr 1fr;
+            }
+
+        }
+        @media screen and (min-width: 1200px){ 
+            body {
+                padding: 10rem 3rem 0rem 3rem;
+            }
+            .footer-header {
+                font-size: 38px;
+                margin: 15rem 0 13rem 0;
             }
         }
     </style>
@@ -207,29 +216,29 @@
 
     <main>
         <div class="image-div">
-            <img class="main-images" src="images/first-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/first-card.webp" alt="img">
             <p class="img-title">Aire</p>
-            <img class="main-images" src="images/second-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/second-card.webp" alt="img">
             <p class="img-title">Correlated</p>
-            <img class="main-images" src="images/third-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/third-card.webp" alt="img">
             <p class="img-title">Channel 5</p>
-            <img class="main-images" src="images/fourth-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/fourth-card.webp" alt="img">
             <p class="img-title">Ronald Abram</p>
-            <video class="main-images" src="https://framerusercontent.com/modules/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M~Jq48dGctHPeHtnn90xE_Aem-3HQJB_aNVwfu2fao5Ok.mp4" loop muted width="200" height="200"></video>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/XuzMZ3Z1QQHKltPqRjzGnsWs27M~Jq48dGctHPeHtnn90xE_Aem-3HQJB_aNVwfu2fao5Ok.mp4" loop ></video>
             <p class="img-title">Propeller</p>
-            <img class="main-images" src="images/sixth-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/sixth-card.webp" alt="img">
             <p class="img-title">Schuh</p>
-            <img class="main-images" src="images/seventh-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/seventh-card.webp" alt="img">
             <p class="img-title">Paperstreet</p>
-            <video class="main-images" src="https://framerusercontent.com/modules/assets/SGjFvgcbK7s4yKh0xwuNjriMNII~5SCIlrVv6SNR5PFMjsMv3qAIi3sYsG2gjdlB0qM-tng.mp4" loop width="200" height="200"></video>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/SGjFvgcbK7s4yKh0xwuNjriMNII~5SCIlrVv6SNR5PFMjsMv3qAIi3sYsG2gjdlB0qM-tng.mp4" loop ></video>
             <p class="img-title">OH.SUPPLY</p>
-            <img class="main-images" src="images/ninth-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/ninth-card.webp" alt="img">
             <p class="img-title">Monokel Eyewear</p>
-            <img class="main-images" src="images/tenth-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/tenth-card.webp" alt="img">
             <p class="img-title">Lawtrades &nbsp; <span>Coming Soon</span></p> 
-            <img class="main-images" src="images/eleventh-card.webp" alt="img" width="200px" height="200px">
+            <img class="main-images" src="images/eleventh-card.webp" alt="img">
             <p class="img-title">Baselworld &nbsp; <span>Coming Soon</span></p> 
-            <video class="main-images" src="https://framerusercontent.com/modules/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg~DPEeC0jYyBwx9c865cOkUi-KzBM-3ukyhpgtPhvYo_U.mp4" loop width="200" height="200"></video>
+            <video class="main-images" src="https://framerusercontent.com/modules/assets/NieGBlxBdgpz9QCHV5Aj89rWjVg~DPEeC0jYyBwx9c865cOkUi-KzBM-3ukyhpgtPhvYo_U.mp4" loop ></video>
             <p class="img-title">NYCB</p>
         </div>
     </main>
