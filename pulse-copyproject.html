@@ -14,7 +14,10 @@
             --light-green-color:#1fe374;
             --black-color:#080c16;
             --light-grey-color:#d6dae5;
+            --lightish-grey:#f2f3f3;
             --white-color:#fcfcfc;
+            --grey-color:#83858a;
+            --blackish-color: #464951;
         }
         body {
             font-family: 'Roboto', sans-serif;
@@ -66,13 +69,37 @@
         .card-1 a {
             color: var(--black-color);
         }
+        .card-2 h1 {
+            font-size: 2.3rem;
+            color: var(--green-color);
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .card-2 li, .card-3 li{
+            margin-bottom: 1rem;
+        }
+        .card-2 ul, .card-3 ul {
+            list-style-type: none;
+            padding-left: 15px;
+        }
         .card-2 {
-            border: 1px solid black;
-            border-radius: .5rem ;
+            background-color: var(--white-color);
+            border: 1px solid var(--green-color);
+            border-radius: .5rem .5rem 0 0;
             overflow: hidden;
+            position: relative;
+            padding: 1rem 1rem 1rem 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .price-per-month {
+            font-size: 1.2rem;
+            margin-top: .3rem;
+            margin-bottom: 2rem;
+            color: var(--grey-color);
         }
         .card-2-top {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid var(--green-color);
             background-color: var(--green-color);
             margin-top: 0;
             text-align: center;
@@ -80,8 +107,61 @@
             font-size: .9rem;
             font-weight: 500;
             padding: .5rem 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
         }
-        
+        .check-marks {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 14px;
+        }
+        .green-btn {
+            background-color: var(--light-green-color);
+            font-size: 1.3rem;
+            color: var(--blackish-color);
+            font-weight: 600;
+            border: none;
+            width: 100%;
+            padding: .9rem 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .list-title {
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: .05rem;
+        }
+        .card-3 {
+            background-color: var(--white-color);
+            border: 1px solid var(--light-grey-color);
+            overflow: hidden;
+            position: relative;
+            padding: 4rem 1rem 1rem 1rem;
+        }
+        .card-3 h1 {
+            color: var(--green-color);
+            font-weight: 300;
+            font-size: 2rem;
+            letter-spacing: .09rem;
+            margin-bottom: 0;
+        }
+        .card-3-top {
+            border-bottom: 1px solid var(--light-grey-color);
+            font-size: .9rem;
+            margin-top: 0;
+            position: absolute;
+            background-color: var(--lightish-grey);
+            letter-spacing: .01rem;
+            line-height: 1.6rem;
+            padding: 1rem 1.8rem;
+            text-align: center;
+            line-height: 1.3rem;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
     </style>
 </head> 
     <body>
@@ -110,33 +190,32 @@
 
             <div class="card-2">
                 <p class="card-2-top">Recommended</p>
-                <h1>Small business Plan</h1>
-                <p>$59 per month</p>
-                <p>You Get Pluse Basic, Plus:</p>
+                <h1>Small Business Plan</h1>
+                <p class="price-per-month">$59 per month</p>
+                <p class="list-title">You Get Pluse Basic, Plus:</p>
 
                 <ul>
-                    <li>Manage cash flow across multiple finacial accounts</li>
-                    <li>Invite your investors, book keeper, or management team to see reports or manage cash flow</li>
-                    <li>Integrate with QuickBooks Online for more accurate cash flow</li>
-                    <li>Track your acual cash flow alongside your projected cash flow</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Manage cash flow across multiple finacial accounts</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Invite your investors, book keeper, or management team to see reports or manage cash flow</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Integrate with QuickBooks Online for more accurate cash flow</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Track your acual cash flow alongside your projected cash flow</li>
                 </ul>
-
-                <button> Sign Up Now</button>
+                <button class="green-btn"> Sign Up Now</button>
             </div>
 
             <div class="card-3">
-                <p>Complex business with multiple financil accounts, currencies, or auditing needs?</p>
-                <h1>Unlock Extra Features</h1>
-                <p>$89 per month</p>
-                <p>Get it All,Plus:</p>
+                <p class="card-3-top">Complex business with multiple financil accounts, currencies, or auditing needs?</p>
+                <h1>Unlock Extra <br>Features</h1>
+                <p class="price-per-month">$89 per month</p>
+                <p class="list-title">Get it All,Plus:</p>
 
                 <ul>
-                    <li>Manage cash flow across unlimited finacial accounts</li>
-                    <li>Convert to any currency for localized cash flow reporting and projections</li>
-                    <li>Attach invoices or contracts to your cash flow entries for accountablility and auditing</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Manage cash flow across unlimited finacial accounts</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Convert to any currency for localized cash flow reporting and projections</li>
+                    <img class="check-marks" src="images/icon-check-bullet.svg" alt="img"><li>Attach invoices or contracts to your cash flow entries for accountablility and auditing</li>
                 </ul>
 
-                <button> Try Premium</button>
+                <button class="green-btn"> Try Premium</button>
             </div>
         </section>
 
