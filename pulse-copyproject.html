@@ -33,6 +33,28 @@
            width: 32px;
            color: var(--green-color);
         }
+        .nav-list-container {
+            display: none;
+            list-style-type: none;
+            align-items: center;
+            letter-spacing: .05rem;
+            width: auto;
+            padding: 0;
+            font-weight: 600;
+            color: var(--green-color);
+        }
+        .nav-list-container li {
+            margin-left: 2.5rem; 
+
+        }
+        .top-sign-up-btn {
+            border: 2px solid var(--green-color);
+            color: var(--green-color);
+            padding: .4rem .9rem;
+            font-weight: 600;
+            background-color: transparent;
+            font-size: 1rem;
+        }
         nav {
             display: flex;
             justify-content: space-between;
@@ -213,7 +235,8 @@
             flex-direction: column;   
         }
         .footer-btn {
-            background-color: var(--light-green-color);
+            background-color: var(--green-color);
+            background: linear-gradient(to right, var(--green-color), var(--light-green-color));
             width: 100%;
             font-size: 1rem;
             color: var(--black-color);
@@ -277,16 +300,38 @@
         }
 
         @media screen and (min-width: 768px){
+            nav {
+                background-color:transparent;
+                border: none;
+                padding: 2.5rem 1.5rem;
+            }
+            .hamburger-svg {
+                display: none;
+            }
+            .nav-list-container {
+                display: flex;
+            }
             header h1 {
                 letter-spacing: -2px;
                 font-size: 4rem;
                 line-height: 4rem;
+                margin-top: 4rem;
                 margin-bottom: 0;
             }
             .FQA-container {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-column-gap: 2rem;
+            }
+            .logo-btn-flex img {
+                width: 155px;
+                padding-top: 5rem ;
+            }
+            .logo-btn-flex button {
+                width: 306px;
+            }
+            .list-flex-container {
+                margin: 1.3rem 0 3rem 0;
             }
         }
     </style>
@@ -295,7 +340,15 @@
         <main>
             <nav>
                 <img src="images/pulse-logo.svg" alt="img" width="120" height="120">
-                <svg viewBox="0 0 35 22" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Menu - Open</title><path d="M0 0h35v2H0zM0 10h35v2H0zM0 20h35v2H0z"></path></svg>
+                <svg  class="hamburger-svg" viewbox="0 0 35 22" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Menu - Open</title><path d="M0 0h35v2H0zM0 10h35v2H0zM0 20h35v2H0z"></path></svg>
+                
+                <ul class="nav-list-container"> 
+                    <li>Features</li>
+                    <li>Customer Stories</li>
+                    <li>Pricing</li>
+                    <li>Blog</li>
+                    <li><button  class="top-sign-up-btn">Sign Up</button></li>
+                </ul>
             </nav>
 
             <header>
