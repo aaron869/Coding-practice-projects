@@ -24,12 +24,57 @@
             font-weight:300;
             margin: 0;
         }
+        .side-info-1, .side-info-2 {
+            display: none;
+        }
+        nav p {
+            letter-spacing: .05rem;
+            line-height: 1.8rem;
+        }
+       /* nav section */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: .5rem 1.4rem 1rem 1.4rem;
+            background-color: var(--pale-green-color);
+            border-bottom: 1px solid var(--light-grey-color);
+        }
+        nav p {
+            font-size: 1.1rem;
+        }
+        .input-title {
+            letter-spacing: .05rem;
+            font-size: .8rem;
+        }
+        /* main section */
+        .card-and-side-info-div {
+            padding: 4rem 2rem 0 2rem;
+        }
+        .card-1 {
+            border: 1px solid var(--light-grey-color);
+            padding: 1rem 2rem 0rem 2rem;
+        }
+        .input-box {
+            height: 2.3rem;
+            border: 1px solid var(--light-grey-color);
+            border-radius: 5px;
+            box-shadow: .5px .5px 2px var(--grey-color);
+            width: 100%;
+        }
+        .little-input-box {
+            height: 2.3rem;
+            border: 1px solid var(--light-grey-color);
+            border-radius: 5px;
+            box-shadow: .5px .5px 2px var(--grey-color);
+        }
+        .input-title {
+            margin-bottom: 0;
+        }
 
 
-
-
-
-
+        /* media querys */
         @media screen and (min-width: 480px){
      }
 
@@ -47,28 +92,28 @@
     <body>
         <main>
             <nav>
-                <img src="images/pulse-logo.svg" alt="img" width="120" height="120">
+                <img src="images/pulse-logo.svg" alt="img" width="150" height="111">
                 <p>Take control of your cash flow with the #1 cash flow software.</p>
             </nav>
 
             <main>
                 <div class="card-and-side-info-div">
                     <div class="card-1">
-                        <p>First Name</p>
-                        <input type="text">
-                        <p>Last Name</p>
-                        <input type="text">
-                        <p>Email</p>
-                        <input type="email">
-                        <p>Company Name</p>
-                        <input type="text">
-                        <p>Create a Password</p>
-                        <input type="password">
-                        <p>Confirm Password</p>
-                        <input type="password">
-                        <p> Your Pulse Site Address Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
-                        <input type="text"> <label for="email">.pulseapp.com</label>
-                        <p>Letters and numbers only, no spaces.</p>
+                        <p class="input-title">First Name</p>
+                        <input class="input-box" type="text">
+                        <p class="input-title">Last Name</p>
+                        <input class="input-box" type="text">
+                        <p class="input-title">Email</p>
+                        <input class="input-box" type="email">
+                        <p class="input-title">Company Name</p>
+                        <input class="input-box" type="text">
+                        <p class="input-title">Create a Password</p>
+                        <input class="input-box" type="password">
+                        <p class="input-title">Confirm Password</p>
+                        <input class="input-box" type="password">
+                        <p class="input-title"> Your Pulse Site Address Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
+                        <input class="little-input-box" type="text"> <label for="email">.pulseapp.com</label>
+                        <p class="input-title">Letters and numbers only, no spaces.</p>
                     </div>
 
                     <div class="side-info-1">
@@ -123,3 +168,6 @@
         </footer>
     </body>
 </html>
+
+
+–
