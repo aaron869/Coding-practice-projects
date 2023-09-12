@@ -50,11 +50,12 @@
         }
         /* main section */
         .card-and-side-info-div {
-            padding: 4rem 2rem 0 2rem;
+            padding: 4rem 2rem 0rem 2rem;
         }
         .card-1 {
             border: 1px solid var(--light-grey-color);
             padding: 1rem 2rem 0rem 2rem;
+            height:fit-content;
         }
         .input-box {
             height: 2.3rem;
@@ -68,9 +69,14 @@
             border: 1px solid var(--light-grey-color);
             border-radius: 5px;
             box-shadow: .5px .5px 2px var(--grey-color);
+
         }
         .input-title {
             margin-bottom: 0;
+        }
+        .bottom-section {
+            margin-top: 2rem;
+            border-top: 1px solid var(--black-color);
         }
 
 
@@ -111,9 +117,11 @@
                         <input class="input-box" type="password">
                         <p class="input-title">Confirm Password</p>
                         <input class="input-box" type="password">
-                        <p class="input-title"> Your Pulse Site Address Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
-                        <input class="little-input-box" type="text"> <label for="email">.pulseapp.com</label>
-                        <p class="input-title">Letters and numbers only, no spaces.</p>
+                        <div class="bottom-section">
+                            <p class="bigger-input-title"> Your Pulse Site Address Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
+                            <input class="little-input-box" type="text"> <label for="email">.pulseapp.com</label>
+                            <p class="input-title">Letters and numbers only, no spaces.</p>
+                        </div>
                     </div>
 
                     <div class="side-info-1">
