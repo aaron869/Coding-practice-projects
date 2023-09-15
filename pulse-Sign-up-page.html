@@ -15,6 +15,7 @@
             --black-color:#080c16;
             --light-grey-color:#d6dae5;
             --lightish-grey:#f2f3f3;
+            --greyish-white: #f4f4f4;
             --white-color: #ffffff;
             --whiteish-color:#fcfcfc;
             --grey-color:#83858a;
@@ -53,13 +54,18 @@
             background-color: var(--whiteish-color);
         }
         /* main section */
+
+        /* card-1 */
         .card-and-side-info-div {
             padding: 4rem 2rem 0rem 2rem;
         }
         .card-1 {
             border: 1px solid var(--light-grey-color);
-            padding: 1rem 2rem 0rem 2rem;
-            background-color: var(--white-color)
+            background-color: var(--white-color);
+            box-shadow: 1px 1px 10px var(--light-grey-color);
+        }
+        .top-section {
+            padding: 1rem 2rem 3rem 2rem;
         }
         .input-box {
             height: 2.3rem;
@@ -73,17 +79,39 @@
             border: 1px solid var(--light-grey-color);
             border-radius: 5px;
             box-shadow: .5px .5px 2px var(--grey-color);
-
         }
         .input-title {
             margin-bottom: 0;
         }
-        .bottom-section {
-            margin-top: 2rem;
-            border-top: 1px solid var(--black-color);
+        .bottom-section h2 {
+            color: var(--blackish-color);
+            margin-bottom: 0;
+            font-size: 1rem;
         }
-
-
+        .bottom-section {
+            padding: 1rem 2rem 2rem 2rem;
+            border-top: 1px solid var(--light-grey-color);
+            background-color: var(--greyish-white);
+        }
+        #info-top {
+            margin-top: 0;
+        }
+        .input-info {
+            font-size: .7rem;
+            letter-spacing: .06rem;
+            line-height: 1rem;
+            max-width: 17rem;
+        }
+        .little-input-box {
+            margin-top: 1rem ;
+        }
+        /* card-2 */
+        .card-2 {
+            border: 1px solid var(--light-grey-color);
+            background-color: var(--white-color);
+            box-shadow: 1px 1px 10px var(--light-grey-color);
+            padding: 1rem 2rem 3rem 2rem;
+        }
         /* media querys */
         @media screen and (min-width: 480px){
      }
@@ -109,22 +137,26 @@
             <main>
                 <div class="card-and-side-info-div">
                     <div class="card-1">
-                        <p class="input-title">First Name</p>
-                        <input class="input-box" type="text">
-                        <p class="input-title">Last Name</p>
-                        <input class="input-box" type="text">
-                        <p class="input-title">Email</p>
-                        <input class="input-box" type="email">
-                        <p class="input-title">Company Name</p>
-                        <input class="input-box" type="text">
-                        <p class="input-title">Create a Password</p>
-                        <input class="input-box" type="password">
-                        <p class="input-title">Confirm Password</p>
-                        <input class="input-box" type="password">
+                        <div class="top-section">
+                            <p class="input-title">First Name</p>
+                            <input class="input-box" type="text">
+                            <p class="input-title">Last Name</p>
+                            <input class="input-box" type="text">
+                            <p class="input-title">Email</p>
+                            <input class="input-box" type="email">
+                            <p class="input-title">Company Name</p>
+                            <input class="input-box" type="text">
+                            <p class="input-title">Create a Password</p>
+                            <input class="input-box" type="password">
+                            <p class="input-title">Confirm Password</p>
+                            <input class="input-box" type="password">
+                        </div>
+
                         <div class="bottom-section">
-                            <p class="bigger-input-title"> Your Pulse Site Address Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
+                            <h2>Your Pulse Site Address</h2>
+                            <p class="input-info" id="info-top">Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
                             <input class="little-input-box" type="text"> <label for="email">.pulseapp.com</label>
-                            <p class="input-title">Letters and numbers only, no spaces.</p>
+                            <p class="input-info">Letters and numbers only, no spaces.</p>
                         </div>
                     </div>
 
@@ -150,11 +182,11 @@
                 <div class="card-and-side-info-div">
                     <h1> Billing Information 🔒</h1>
                     <div class="card-2">
-                        <p>Name on card</p>
-                        <input type="text">
+                        <p class="input-title">Name on card</p>
+                        <input type="text" class="input-box">
 
-                        <p>Credit or debit card</p>
-                        <input type="text" placeholder="Number           MM/YY CVC">
+                        <p class="input-title">Credit or debit card</p>
+                        <input type="text" class="input-box" placeholder="Number                                                   MM/YY">
                         <p>All data and transactions are securely stored and processed using industry standards.</p>
                     </div>
 
