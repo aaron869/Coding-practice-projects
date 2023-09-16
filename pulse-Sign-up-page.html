@@ -109,8 +109,50 @@
         .card-2 {
             border: 1px solid var(--light-grey-color);
             background-color: var(--white-color);
-            box-shadow: 1px 1px 10px var(--light-grey-color);
-            padding: 1rem 2rem 3rem 2rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        #card-name-input {
+            margin-bottom: 1rem;
+        }
+        .card-and-side-info-div h1 {
+            color: var(--blackish-color);
+            font-size: 1.5rem;
+        }
+        .card-2-p { 
+            font-size: .8rem;
+            letter-spacing: .05rem;
+            line-height: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0rem;
+        }
+        .bottom-half {
+            padding: 0rem 2rem;
+        }
+        .trial-plan-info a {
+            color: var(--black-color);
+        }
+        .trial-plan-info {
+            line-height: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .terms {
+            font-size: .9rem;
+            line-height: 1.5rem;
+            margin: 0;
+        }
+        .blue-links {
+            color: rgb(0, 157, 255);
+            font-weight: 400;
+        }
+        .start-trial-btn {
+            margin: 2rem 0 0 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            background-color: var(--light-green-color);
+            border: none;
         }
         /* media querys */
         @media screen and (min-width: 480px){
@@ -121,9 +163,10 @@
 
         @media screen and (min-width: 1024px){
      }
+
         @media screen and (min-width: 1098px){
 
-        
+    
      }
     </style>
 </head> 
@@ -183,11 +226,11 @@
                     <h1> Billing Information 🔒</h1>
                     <div class="card-2">
                         <p class="input-title">Name on card</p>
-                        <input type="text" class="input-box">
+                        <input type="text" class="input-box" id="card-name-input">
 
                         <p class="input-title">Credit or debit card</p>
-                        <input type="text" class="input-box" placeholder="Number                                                   MM/YY">
-                        <p>All data and transactions are securely stored and processed using industry standards.</p>
+                        <input type="text" class="input-box" placeholder="    Card Number                                           MM/YY">
+                        <p class="card-2-p">All data and transactions are securely stored and processed using industry standards.</p>
                     </div>
 
                     <div class="side-info-2">
@@ -196,13 +239,15 @@
                     </div>
                 </div>
 
-                <p>You're signing up for a free 30-day trial of the Plus plan. At the end of the trial on October 10 we'll charge you $59 a month to keep using Pulse, and you can cancel any time.</p>
+                <div class="bottom-half">
+                    <p class="trial-plan-info">You're signing up for a free 30-day trial of the Plus plan. At the end of the trial on October 10 we'll charge you $59 a month to keep using Pulse, and you can <a href="#">cancel any time.</a></p>
 
-                <input type="checkbox"> <p>I have read and agree to Pulse's Terms of Use</p>
-                <input type="checkbox"> <p> I have read and agree to Pulse's Privacy Policy</p>
-                <input type="checkbox"> <p>I want to receive a monthly newsletter with helpful cash flow advice</p>
-                
-                <button>Start Trial</button>
+                    <p class="terms"> <input type="checkbox"> I have read and agree to Pulse's <span class="blue-links">Terms of Use</span></p>
+                    <p class="terms"> <input type="checkbox"> I have read and agree to Pulse's <span class="blue-links">Privacy Policy</span></p>
+                    <p class="terms"> <input type="checkbox"> I want to receive a <span class="blue-links">monthly newsletter</span> with helpful cash flow advice</p> 
+                    
+                    <button class="start-trial-btn">Start Trial</button>
+                </div>
             </main>
 
         <footer class="footer-container">
