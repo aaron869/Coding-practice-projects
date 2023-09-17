@@ -33,6 +33,9 @@
             letter-spacing: .05rem;
             line-height: 1.8rem;
         }
+        .underline {
+            text-decoration: underline;
+        }
        /* nav section */
         nav {
             display: flex;
@@ -100,7 +103,7 @@
             font-size: .7rem;
             letter-spacing: .06rem;
             line-height: 1rem;
-            max-width: 17rem;
+           
         }
         .little-input-box {
             margin-top: 1rem ;
@@ -146,13 +149,27 @@
             font-weight: 400;
         }
         .start-trial-btn {
-            margin: 2rem 0 0 0;
+            margin: 2rem 0 2rem 0;
             font-weight: 700;
             font-size: 1.2rem;
             padding: 1rem 2rem;
             border-radius: .5rem;
             background-color: var(--light-green-color);
             border: none;
+        }
+        .footer-container {
+            text-align: center;
+            padding: 1rem 1.5rem;
+            height: 3rem;
+            color: var(--grey-color);
+            background-color: var(--black-color);
+        }
+        .footer-container p {
+            font-size: .7rem;
+            line-height: 1.1rem;
+            word-spacing: .1rem;
+            letter-spacing: .05rem;
+            margin: 0;
         }
         /* media querys */
         @media screen and (min-width: 480px){
@@ -198,7 +215,7 @@
                         <div class="bottom-section">
                             <h2>Your Pulse Site Address</h2>
                             <p class="input-info" id="info-top">Every Pulse account has its own unique web address where you'll log in. Remember to bookmark it! </p>
-                            <input class="little-input-box" type="text"> <label for="email">.pulseapp.com</label>
+                            <p><input class="little-input-box" type="text">.pulseapp.com</p>
                             <p class="input-info">Letters and numbers only, no spaces.</p>
                         </div>
                     </div>
@@ -251,12 +268,11 @@
             </main>
 
         <footer class="footer-container">
-
-            <p>©2019 Pulseapp.com, Inc. All Rights Reserved | <span class="underline">Terms of Use</span> | <span class="underline">Privacy Policy</span> | <span class="underline">EU Privacy</span> <br>
-                Pulse is made by <span class="underline">Simple Focus</span>. We also make <span class="underline">Ballpark</span>, <span class="underline">Sifter</span>, and <span class="underline">Curated</span>. </p>
-        </footer>
+   
+                <p>
+                    Pulse is made by <span class="underline">Simple Focus</span>. We also make <span class="underline">Ballpark</span>,<span class="underline">Sifter</span>, <span class="underline">Curated</span>, and Temper.
+                    ©2019 Pulseapp.com, Inc. All Rights Reserved | <span class="underline">Terms of Use</span> |  <span class="underline">Privacy Policy</span> | <span class="underline">EU Privacy</span>
+                </p>
+            </footer>
     </body>
 </html>
-
-
-–
