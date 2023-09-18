@@ -20,6 +20,14 @@
             --whiteish-color:#fcfcfc;
             --grey-color:#83858a;
             --blackish-color: #464951;
+            --baby-blue: hsl(203, 100%, 50%);
+        }
+        .wrapper {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            margin: auto;
         }
         html {
             box-sizing: border-box;
@@ -64,6 +72,9 @@
         /* card-1 */
         .card-and-side-info-div {
             padding: 4rem 2rem 0rem 2rem;
+        }
+        .card-and-side-info-div-2 {
+            padding: 0rem 2rem 0rem 2rem;
         }
         .card-1 {
             border: 1px solid var(--light-grey-color);
@@ -118,9 +129,10 @@
         #card-name-input {
             margin-bottom: 1rem;
         }
-        .card-and-side-info-div h1 {
+        .card-2-title {
             color: var(--blackish-color);
             font-size: 1.5rem;
+            margin: 3rem 0 1.5rem 2rem;
         }
         .card-2-p { 
             font-size: .8rem;
@@ -147,6 +159,7 @@
         }
         .input-flex input {
             flex: 1;
+            min-width: 1px;
         }
         .terms {
             font-size: .9rem;
@@ -154,7 +167,7 @@
             margin: 0;
         }
         .blue-links {
-            color: rgb(0, 157, 255);
+            color: var(--baby-blue);
             font-weight: 400;
         }
         .start-trial-btn {
@@ -169,7 +182,7 @@
         .footer-container {
             text-align: center;
             padding: 1rem 1.5rem;
-            height: 3rem;
+            height: auto;
             color: var(--grey-color);
             background-color: var(--black-color);
         }
@@ -180,19 +193,101 @@
             letter-spacing: .05rem;
             margin: 0;
         }
+        /* side-info */
+        .side-info-1 {
+            height: 697px;
+        }
+        .side-second-title {
+            margin-top: 0;
+            margin-bottom: .3rem;
+            font-size: 1.2rem;
+            letter-spacing: .05rem;
+            color: var(--blackish-color);
+        }
+        .side-main-text {
+            margin-top: 0;
+            letter-spacing: .03rem;
+            line-height: 1.4rem;
+            font-size: .9rem;
+        }
+        .side-info-1, .side-info-2 {
+            flex-direction: column;
+            max-width: 300px;
+            padding: 0rem 1.5rem 1.5rem 0rem;
+        } 
+        .card-and-side-info-div, .card-and-side-info-div-2{
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        .top, .bottom {
+            padding: 0 1rem;
+        }
+        .top h1 {
+            color: var(--blackish-color);
+            font-size: 2.2rem;
+            margin-bottom: 0;
+        }
+        .top p {
+            margin: .1rem 0 0 0;
+            font-size: 1.2rem;
+            color: var(--grey-color);
+            letter-spacing: .03rem;
+        }
+        .p-one {
+            width: 11rem;
+            color: var(--blackish-color);
+            font-weight: 400;
+            display: inline-block;
+            margin-bottom: 0rem;
+            
+        }
+        .middle {
+            margin: 2rem 0;
+            border-top: 1px solid var(--light-grey-color);
+            border-bottom:  1px solid var(--light-grey-color);
+            padding: 1rem;
+        }
+        #design-id {
+            font-size: .9rem;
+            margin-top: 0;
+            font-weight: 400;
+            color: var(--grey-color);
+        }
+        #little-heading {
+            margin-bottom: 0.3rem;
+            font-size: .8rem;
+            font-weight: 400;
+            color: var(--blackish-color);
+        }
+        .circle-img {
+            display: inline-block;
+            border-radius: 50px;
+            margin-left: .4rem;
+            border: 1px double var(--light-grey-color);
+        }
+        .bottom {
+            margin: 0;
+        }
+        .bottom a {
+            color: var(--baby-blue);
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: .03rem;
+        }
         /* media querys */
-        @media screen and (min-width: 480px){
-     }
-
         @media screen and (min-width: 768px){
+            .side-info-1, .side-info-2 {
+            display: flex;
+        } 
+        .card-2 {
+            height: fit-content;
+        }
      }
-
         @media screen and (min-width: 1024px){
-     }
-
-        @media screen and (min-width: 1098px){
-
-    
+            .start-trial-btn {
+                margin-bottom: 6rem;
+            }
      }
     </style>
 </head> 
@@ -203,7 +298,7 @@
                 <p>Take control of your cash flow with the #1 cash flow software.</p>
             </nav>
 
-            <main>
+            <main class="wrapper">
                 <div class="card-and-side-info-div">
                     <div class="card-1">
                         <div class="top-section">
@@ -238,32 +333,37 @@
                         </div>
 
                         <div class="middle">
-                            <p>Pulse takes the fear and stress out of cash flow projection and management.”</p>
-                            <img src="" alt="img">
-                            <p>Casimir Loeber Base-10 Design & Development Inc.</p>
+                            <p class="p-one">"Pulse takes the fear and stress out of cash flow projection and management.”</p>
+                            <img class="circle-img" src="images/pulse-circle-pic.jpeg" alt="img"  width="75" height="73">
+                            <p id="little-heading">CASIMIR LOEBER</p>
+                            <p id="design-id">Base-10 Design & Development Inc.</p>
                         </div>
 
                         <div class="bottom">
-                            <p>Need more from Pulse? If you have a complex business with multiple financial accounts, currencies, or auditing needs, you should try our Pulse Unlimited plan for only $30 more per month.</p>
+                            <h2 class="side-second-title">Need more from Pulse?</h2>
+                            <p class="side-main-text">If you have a complex business with multiple financial accounts, currencies, or auditing needs, you should try our Pulse Unlimited plan for only $30 more per month.</p>
                             <a href="#">Switch now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="card-and-side-info-div">
-                    <h1> Billing Information 🔒</h1>
+               
+                <h1 class="card-2-title"> Billing Information 🔒</h1>
+                <div class="card-and-side-info-div-2">
+                   
                     <div class="card-2">
+                        
                         <p class="input-title">Name on card</p>
                         <input type="text" class="input-box" id="card-name-input">
 
                         <p class="input-title">Credit or debit card</p>
-                        <input type="text" class="input-box" placeholder="    Card Number                                           MM/YY">
+                        <input type="text" class="input-box"  placeholder="    Card Number">
                         <p class="card-2-p">All data and transactions are securely stored and processed using industry standards.</p>
                     </div>
 
                     <div class="side-info-2">
-                        <p> Cancel any time. Your first month is free, but we ask for your credit card upfront to prevent an interruption in service. We won't charge you until the end of your 30-day free trial. </p>
-                        <p>We'll email you reminders before your free trial is up, and we'll send you invoices each month when we charge your card. </p>
+                        <h2 class="side-second-title"> Cancel any time. </h2>
+                        <p class="side-main-text">Your first month is free, but we ask for your credit card upfront to prevent an interruption in service. We won't charge you until the end of your 30-day free trial. <br> <br>
+                        We'll email you reminders before your free trial is up, and we'll send you invoices each month when we charge your card. </p>
                     </div>
                 </div>
 
