@@ -12,16 +12,21 @@
 </head>
 <body>
     <p>youtube button</p>
-    <button class="subscribe-btn" onclick="
-    const subBtn = document.querySelector('.subscribe-btn');
+    <button class="subscribe-btn">subscribe</button>
 
-    if (subBtn.innerHTML === 'subscribe') {
+            <script>
+
+                const subBtn = document.querySelector('.subscribe-btn');
+
+                function activatesubscribe () {
+                if (subBtn.innerHTML === 'subscribe') {
                 subBtn.innerHTML = 'subscribed';
-            } else {
-                subBtn.innerHTML = 'subscribe';
-            }
+                } else {
+                    subBtn.innerHTML = 'subscribe';
+                }
+                }
 
-    ">subscribe</button>
-
+                subBtn.addEventListener("click", activatesubscribe);
+            </script>
 </body>
 </html>
