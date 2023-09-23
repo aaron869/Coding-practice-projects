@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+
+    <style>
+        body {
+            background: linear-gradient( hsl(240, 100%, 26%), hsl(272, 100%, 25%)) no-repeat center center;
+            height: 100vh;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            max-width: 25rem;
+            min-height: 34rem;
+            padding: 1rem;
+            margin: auto auto auto auto;
+        }
+        .list-item-div {
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>To Do List 📝</h2>
+            <div>
+                <input class="task-input" type="text" placeholder="Add your Task">
+                <button class="add-btn">ADD</button>
+            </div>
+       <div class="list-container">
+            <div class="list-item-div"> 
+                <li>doe f frv<button>dd</button><button>dfd</button></li> 
+        
+                    
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+            const container = document.querySelector(".list-container");
+            const addBtn = document.querySelector(".add-btn");
+            const taskInput = document.querySelector(".task-input");
+            const removeBtn =  document.querySelector(".remove-btn");
+
+
+
+
+        addBtn.addEventListener("click", function() {
+            let newDiv = document.createElement("div");
+            let li = document.createElement("li");
+            let newBtn = document.createElement("button");
+            let inputText = taskInput.value;
+           
+
+            container.append(newDiv);
+            newDiv.classList.add("list-item-div");
+            newDiv.append(li);
+            li.append(inputText);
+
+            newDiv.append(newBtn);
+            newBtn.classList.add("remove-btn");
+            
+            // newBtn.classList.add("remove-btn");
+
+  
+        })
+  
+        removeBtn.addEventListener("click", function() {
+            li.remove();
+        })
+        
+
+    </script>
+</body>
+</html>
