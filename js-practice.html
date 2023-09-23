@@ -37,6 +37,56 @@
             <button class="quote-btn">New Quote</button>
         </div>
 
+
+        <script>
+            
+            let btn = document.querySelector('.quote-btn');
+            let theQuote = document.querySelector('.quote')
+            let theAuthor = document.querySelector('.author')
+
+            const quotes = [
+                {
+                    person: '—Walt Whitman' ,
+                    quote: "Keep your face always toward the sunshine, and shadows will fall behind you."
+                },
+
+                {
+                    person: '—Billie Jean King' ,
+                    quote: "Champions keep playing until they get it right."
+                },
+
+                {
+                    person: '— Toni Morrison' ,
+                    quote: "You are your best thing."
+                },
+
+                {
+                    person: '—Winston Churchill' ,
+                    quote: "Success is not final, failure is not fatal: it is the courage to continue that counts."
+                },
+
+                {
+                    person: '—Herman Melville' ,
+                    quote: "It is better to fail in originality than to succeed in imitation."
+                },
+
+                {
+                    person: '—C.S. Lewis' ,
+                    quote: "You are never too old to set another goal or to dream a new dream."
+                }
+            ];
+
+            
+            const random = Math.floor(Math.random() * quotes.length);
+
+
+            btn.addEventListener('click', function() {
+
+                theQuote.innerText = quotes[random].quote;
+                theAuthor.innerText = quotes[random].person;
+
+            });
+        </script>
     </main>
 
 
