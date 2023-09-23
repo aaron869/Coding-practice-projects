@@ -6,6 +6,9 @@
     <title>Document</title>
 
     <style>
+        body {
+            background-color: blanchedalmond;
+        }
         .main-div, h1{
             display: flex;
             flex-direction: column;
@@ -77,10 +80,12 @@
             ];
 
             
-            const random = Math.floor(Math.random() * quotes.length);
 
 
             btn.addEventListener('click', function() {
+
+                const random = Math.floor(Math.random() * quotes.length);
+
 
                 theQuote.innerText = quotes[random].quote;
                 theAuthor.innerText = quotes[random].person;
