@@ -19,19 +19,28 @@
             background-color: whitesmoke;
             max-width: 25rem;
             min-height: 34rem;
-            padding: 1rem;
-            margin: auto auto auto auto;
+            padding: .5rem;
+            margin: auto;
+           
         }
         .list-item-div {
             display: flex;
-            justify-content:space-evenly;
             align-items: center;
             width: 100%;
+            min-width: 15rem;
+            
+        }
+        li {
+            list-style: none;
+            font-size: 1.3rem;
+            flex: 1;
         }
         .remove-btn, .check-btn {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
+           margin: .5rem .3rem 0 0;
         }
+        
     </style>
 </head>
 <body>
@@ -71,16 +80,23 @@
             newDiv.append(li);
             li.append(inputText);
             newDiv.append(checkBtn);
+            checkBtn.innerText = "✔️";
             newDiv.append(removeBtn);
-                
-           
-           
+            removeBtn.innerText = "X";
+            
             let remBtn = newDiv.querySelector(".remove-btn");
+            let cekBtn = newDiv.querySelector(".check-btn");
+
+            cekBtn.addEventListener("click", function(){
+                if (li.style.textDecoration == "none" ) {
+                    cekBtn.previousElementSibling.style.textDecoration = "line-through";
+                } else {
+                    cekBtn.previousElementSibling.style.textDecoration = "none";               
+                 }
+            })
 
             remBtn.addEventListener("click", function() {
-           
-            newDiv.remove();
-
+                newDiv.remove();
             })
         })
   
