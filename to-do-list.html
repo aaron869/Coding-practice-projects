@@ -28,6 +28,10 @@
             align-items: center;
             width: 100%;
         }
+        .remove-btn, .check-btn {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
@@ -38,10 +42,6 @@
                 <button class="add-btn">ADD</button>
             </div>
        <div class="list-container">
-            <div class="list-item-div"> 
-                <li>doe f frv<button>dd</button><button>dfd</button></li> 
-        
-                    
                 
             </div>
         </div>
@@ -52,34 +52,38 @@
             const container = document.querySelector(".list-container");
             const addBtn = document.querySelector(".add-btn");
             const taskInput = document.querySelector(".task-input");
-            const removeBtn =  document.querySelector(".remove-btn");
+           
 
 
 
 
         addBtn.addEventListener("click", function() {
             let newDiv = document.createElement("div");
-            let li = document.createElement("li");
-            let newBtn = document.createElement("button");
+            let li = document.createElement("li"); 
             let inputText = taskInput.value;
-           
+            let checkBtn = document.createElement('button');
+            checkBtn.className= "check-btn";
+            let removeBtn = document.createElement('button');
+            removeBtn.className= "remove-btn";
 
             container.append(newDiv);
             newDiv.classList.add("list-item-div");
             newDiv.append(li);
             li.append(inputText);
+            newDiv.append(checkBtn);
+            newDiv.append(removeBtn);
+                
+           
+           
+            let remBtn = newDiv.querySelector(".remove-btn");
 
-            newDiv.append(newBtn);
-            newBtn.classList.add("remove-btn");
-            
-            // newBtn.classList.add("remove-btn");
+            remBtn.addEventListener("click", function() {
+           
+            newDiv.remove();
 
-  
+            })
         })
   
-        removeBtn.addEventListener("click", function() {
-            li.remove();
-        })
         
 
     </script>
