@@ -61,22 +61,30 @@
         const paperBtn = document.querySelector(".paper-btn");
         const sissorsBtn = document.querySelector(".sissors-btn");
         let player = document.querySelector("#player-score");
-        let playerScore = player.value;
         let computer = document.querySelector("#cpu-score");
-        let computerScore = computer.innerText;
-        console.log(playerScore + 1);
+        let computerText = computer.innerText;
+        let computerScore = Number(computerText);
+        let newScore = 0;
+        let scoreText = player.innerText;
+        let playerScore = Number(scoreText);
+
+
+
+    
+
        rockBtn.addEventListener("click", function(){
             const rpsArr = ["rock", "paper", "sissors"];
             const random = Math.floor(Math.random() * 3);
             const cpuAnswer = rpsArr[random];
-          
+           
             if (cpuAnswer === "sissors") {
-                playerScore + 1;
-                alert ("You Win!");
+                playerScore = playerScore + 1;
+                player.innerText = playerScore;
             } else if (cpuAnswer === "rock") {
-                alert ("It's A Draw"); 
+                alert ("Draw"); 
             } else {
-                alert ("CPU Wins");
+                computerScore = computerScore + 1;
+                computer.innerText = computerScore;
             }
         })
 
@@ -86,12 +94,13 @@
             const cpuAnswer = rpsArr[random];
            
             if (cpuAnswer === "rock") {
-                alert ("You Win!");
+                playerScore = playerScore + 1;
+                player.innerText = playerScore;
             } else if (cpuAnswer === "paper") {
-                alert ("It's A Draw"); 
+                alert ("Draw"); 
             } else {
-                alert ("CPU Wins");
-                cpuScore.innerText + 1;
+                computerScore = computerScore + 1;
+                computer.innerText = computerScore;
             }
         })
 
@@ -101,13 +110,17 @@
             const cpuAnswer = rpsArr[random];
            
             if (cpuAnswer === "paper") {
-                alert ("You Win!");
+                playerScore = playerScore + 1;
+                player.innerText = playerScore;
             } else if (cpuAnswer === "sissors") {
-                alert ("It's A Draw"); 
+                alert ("Draw"); 
             } else {
-                alert ("CPU Wins");
+                computerScore = computerScore + 1;
+                computer.innerText = computerScore;
             }
         })
+
+       
     </script>
 </body>
 </html>
