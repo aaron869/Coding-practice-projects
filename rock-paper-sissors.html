@@ -17,7 +17,7 @@
             text-align: center;
             border: 1px solid black;
             background-color: rgb(34, 143, 71);
-            max-height: 15rem;
+            max-height: 22rem;
             width: 25rem;
             padding: 2rem 1rem;
         }
@@ -38,6 +38,9 @@
 <body>
     <div class="wrapper">
         <h1>Rock Papper Sissors</h1>
+
+        <h2>Result:</h2>
+        <p class="result"></p>
         
         <button class="rock-btn"><img src="images/rock-svgrepo-com.svg" alt="img" width="55" height="55" ></button>
         <button class="paper-btn"><img src="images/paper-and-pen-svgrepo-com.svg" alt="img" width="55" height="55" ></button>
@@ -60,17 +63,29 @@
         const rockBtn = document.querySelector(".rock-btn");
         const paperBtn = document.querySelector(".paper-btn");
         const sissorsBtn = document.querySelector(".sissors-btn");
+        let Result = document.querySelector(".result");
         let player = document.querySelector("#player-score");
         let computer = document.querySelector("#cpu-score");
-        let computerText = computer.innerText;
-        let computerScore = Number(computerText);
-        let newScore = 0;
-        let scoreText = player.innerText;
-        let playerScore = Number(scoreText);
+        let computerScore = 0;
+        let playerScore = 0;
 
-
-
-    
+        function reset (){
+            if (playerScore === 7){
+                playerScore = 0;
+                computerScore = 0;
+                player.innerText = 0;
+                computer.innerText = 0;
+                Result.innerText = "";
+                alert("You Won!");
+            } else if (computerScore === 7){
+                playerScore = 0;
+                computerScore = 0;
+                player.innerText = 0;
+                computer.innerText = 0;
+                Result.innerText = "";
+                alert("Cpu Wins");
+            }
+        }
 
        rockBtn.addEventListener("click", function(){
             const rpsArr = ["rock", "paper", "sissors"];
@@ -80,12 +95,15 @@
             if (cpuAnswer === "sissors") {
                 playerScore = playerScore + 1;
                 player.innerText = playerScore;
+                Result.innerText = "You win!";
             } else if (cpuAnswer === "rock") {
-                alert ("Draw"); 
+                Result.innerText = "Its a Draw";
             } else {
                 computerScore = computerScore + 1;
                 computer.innerText = computerScore;
+                Result.innerText = "Cpu Wins";
             }
+            reset();
         })
 
         paperBtn.addEventListener("click", function(){
@@ -96,12 +114,15 @@
             if (cpuAnswer === "rock") {
                 playerScore = playerScore + 1;
                 player.innerText = playerScore;
+                Result.innerText = "You Win!";
             } else if (cpuAnswer === "paper") {
-                alert ("Draw"); 
+                Result.innerText = "Its a Draw";
             } else {
                 computerScore = computerScore + 1;
                 computer.innerText = computerScore;
+                Result.innerText = "Cpu Wins";
             }
+            reset();
         })
 
         sissorsBtn.addEventListener("click", function(){
@@ -112,12 +133,15 @@
             if (cpuAnswer === "paper") {
                 playerScore = playerScore + 1;
                 player.innerText = playerScore;
+                Result.innerText = "You Win!";
             } else if (cpuAnswer === "sissors") {
-                alert ("Draw"); 
+                Result.innerText = "Its a Draw";
             } else {
                 computerScore = computerScore + 1;
                 computer.innerText = computerScore;
+                Result.innerText = "Cpu Wins";
             }
+            reset();
         })
 
        
