@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <style>
+        /* header */
+        .header-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-wrapper h1 {
+            margin-bottom: 0;
+        }
+        .header-wrapper h2 {
+            margin-bottom: .3rem;
+        }
+        /* main-input-content */
+        input {
+            height: 1.7rem;
+        }
+        /* Graph */
+        #expense-graph-head{
+            display: grid;
+            margin-top: 4rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        #expense-graph-head p{
+            display: flex;
+            align-items: center;
+            padding: 0 .4rem;
+            border: 1px solid black;
+            height: 2rem;
+            margin: 0;
+        }
+        .graph-child{
+            display: grid;
+            height: 2rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .graph-child p{
+            display: flex;
+            align-items: center;
+            padding: 0 .4rem;
+            background-color: rgb(229, 229, 229);
+            border: 1px solid black;
+            height: 100%;
+            margin: 0;
+        }
+        .graph-wrapper{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-wrapper"> 
+        <h1>Expense Tracker</h1>
+        <h2>Add A New Item:</h2>
+    </header>
+  
+    <label for="Name">Name:</label><input class="name-input" type="text" placeholder="Where was the expense made?">
+    <label for="Date">Date:</label><input class="date-input" type="date">
+    <label for="Amount">Amount:</label><input class="amount-input" type="text">
+
+    <button>Add Expense</button>
+
+    <div class="graph-wrapper">
+        <div id="expense-graph-head">
+            <p>Name</p>
+            <p>Date</p> 
+            <p>Amount</p> 
+            <p></p>
+        </div>
+
+        <div class="graph-child">
+            <p>Name</p>
+            <p>Date</p> 
+            <p>Amount</p> 
+            <p></p>
+        </div>        
+    </div>
+ </body>
+</html>
