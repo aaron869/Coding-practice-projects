@@ -19,8 +19,22 @@
             margin-bottom: .3rem;
         }
         /* main-input-content */
+        .main-wrapper{
+            display: flex;
+            flex-direction:column;
+        }
         input {
             height: 1.7rem;
+        }
+       .date-label, .amount-label{
+        width: 5rem;
+       }
+        .date-input, .amount-input{
+         display: inline-block;
+         width: 5rem;
+        }
+        button{
+            display: block;
         }
         /* Graph */
         #expense-graph-head{
@@ -62,11 +76,12 @@
         <h2>Add A New Item:</h2>
     </header>
   
-    <label for="Name">Name:</label><input class="name-input" type="text" placeholder="Where was the expense made?">
-    <label for="Date">Date:</label><input class="date-input" type="date">
-    <label for="Amount">Amount:</label><input class="amount-input" type="text">
-
-    <button>Add Expense</button>
+    <div class="main-wrapper">
+        <label class="name-label" for="Name">Name:</label><input class="name-input" type="text" placeholder="Where was the expense made?"> 
+        <label class="date-label" for="Date">Date:</label><input class="date-input" type="date">
+        <label class="amount-lable" for="Amount">Amount:</label><input class="amount-input" type="text">
+        <button>Add Expense</button>
+    </div>
 
     <div class="graph-wrapper">
         <div id="expense-graph-head">
