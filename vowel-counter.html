@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+
+    <style>
+        /* header */
+        .header-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-wrapper h1 {
+            margin-bottom: 1rem;
+        }
+        .header-wrapper h2 {
+            margin-bottom: .3rem;
+        }
+        /* main-input-content */
+        .main-wrapper{
+            display: flex;
+            flex-direction:column;
+        }
+        .name-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            height: 1.7rem;
+        }
+        .input{
+            width: 88%;
+            margin-bottom: .5rem;
+        }
+        .inner-div{
+            margin: 1.5rem 0;
+        }
+        .date-input, .amount-input{
+            width: 16rem;
+        }
+        #start-btn:hover{
+           cursor: pointer;
+           background-color: rgb(18, 103, 18);
+        }
+        #start-btn:active{
+           background-color:  rgb(23, 124, 23);
+        }
+        #start-btn{
+            display: flex;
+            width: 8rem;
+            height: 3rem;
+            align-self: center;
+            justify-content: center;
+            align-items:center;
+            background-color: rgb(23, 124, 23);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-wrapper"> 
+        <h1>Vowel Counter</h1>
+    </header>
+  
+    <div class="main-wrapper">
+        <div class="name-div">
+            <input class="input" type="text" placeholder="Enter word here"> 
+            <button id="start-btn">Start</button>
+        </div>
+
+ 
+    <script>
+        const startBtn = document.querySelector("#start-btn");
+        const input = document.querySelector(".input");
+       
+        
+
+        startBtn.addEventListener("click", function(){
+            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            let innerInput = input.value;
+            let lowerCaseString = innerInput.toLowerCase();
+            let vowelCount = 0;
+           
+          
+            for(let char of lowerCaseString) {
+
+              if (vowels.includes(char)){
+                vowelCount++;
+              }
+
+            }
+          alert("This word has " + vowelCount + " Vowels");
+        })
+
+    </script>
+
+</body>
+</html>
