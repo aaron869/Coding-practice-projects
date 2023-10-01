@@ -26,15 +26,32 @@
         input {
             height: 1.7rem;
         }
-       .date-label, .amount-label{
-        width: 5rem;
-       }
-        .date-input, .amount-input{
-         display: inline-block;
-         width: 5rem;
+        .name-input{
+            width: 88%;
         }
-        button{
-            display: block;
+        .inner-div{
+            margin: 1.5rem 0;
+        }
+        .date-input, .amount-input{
+            width: 16rem;
+        }
+        #add-btn:hover{
+           cursor: pointer;
+           background-color: rgb(18, 103, 18);
+        }
+        #add-btn:active{
+           background-color:  rgb(23, 124, 23);
+        }
+        #add-btn{
+            display: flex;
+            width: 8rem;
+            height: 3rem;
+            align-self: center;
+            justify-content: center;
+            align-items:center;
+            background-color: rgb(23, 124, 23);
+            border: none;
+            color: white;
         }
         /* Graph */
         #expense-graph-head{
@@ -49,6 +66,7 @@
             border: 1px solid black;
             height: 2rem;
             margin: 0;
+            background-color: rgb(222, 222, 222);
         }
         .graph-child{
             display: grid;
@@ -59,14 +77,22 @@
             display: flex;
             align-items: center;
             padding: 0 .4rem;
-            background-color: rgb(229, 229, 229);
             border: 1px solid black;
-            height: 100%;
+            height: 2rem;
             margin: 0;
         }
         .graph-wrapper{
             display: grid;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+        .delete-btn:hover{
+            background-color: rgb(208, 34, 34);
+            cursor: pointer;;
+        }
+        .delete-btn{
+            background-color: rgb(182, 38, 38);
+            border: 1px solid black;
+            color: black;
         }
     </style>
 </head>
@@ -77,10 +103,14 @@
     </header>
   
     <div class="main-wrapper">
-        <label class="name-label" for="Name">Name:</label><input class="name-input" type="text" placeholder="Where was the expense made?"> 
-        <label class="date-label" for="Date">Date:</label><input class="date-input" type="date">
-        <label class="amount-lable" for="Amount">Amount:</label><input class="amount-input" type="text">
-        <button>Add Expense</button>
+        <div class="name-div">
+            <label class="name-label" for="Name">Name:</label><input class="name-input" type="text" placeholder="Where was the expense made?"> 
+        </div>
+            <div class="inner-div">
+            <label class="date-label" for="Date">Date:</label><input class="date-input" type="date">
+            <label class="amount-lable" for="Amount">Amount:</label><input class="amount-input" type="text">
+        </div>
+        <button id="add-btn">Add Expense</button>
     </div>
 
     <div class="graph-wrapper">
@@ -91,12 +121,51 @@
             <p></p>
         </div>
 
-        <div class="graph-child">
-            <p>Name</p>
-            <p>Date</p> 
-            <p>Amount</p> 
-            <p></p>
-        </div>        
     </div>
- </body>
+ 
+    <script>
+        const addBtn = document.querySelector("#add-btn");
+        const nameInput = document.querySelector(".name-input");
+        const dateInput = document.querySelector(".date-input");
+        const amountInput = document.querySelector(".amount-input");
+        const graphDiv = document.querySelector(".graph-wrapper");
+
+
+        addBtn.addEventListener("click", function(){
+            const newDiv = document.createElement("div");
+            const nameP = document.createElement("p");
+            const dateP = document.createElement("p");
+            const amountP = document.createElement("p");
+            const deleteBtn = document.createElement("button");
+            
+    
+            if (nameInput.value === "" || dateInput.value === "" || amountInput.value === "") {
+                alert(" ggfggf");
+            } else {
+                graphDiv.append(newDiv);
+                newDiv.classList.add("graph-child");
+
+                newDiv.append(nameP);
+                nameP.innerText = nameInput.value;
+
+                newDiv.append(dateP);
+                dateP.innerText = dateInput.value;
+
+                newDiv.append(amountP);
+                amountP.innerText = amountInput.value;
+
+                newDiv.append(deleteBtn);
+                deleteBtn.classList.add("delete-btn");
+                deleteBtn.innerText = "X";
+            }
+            
+            deleteBtn.addEventListener("click", function(){
+                newDiv.remove();
+            })
+            
+
+        })
+    </script>
+
+</body>
 </html>
