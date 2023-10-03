@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp converter</title>
+    <style>
+        .main-wrapper{
+            display: flex;
+            justify-content: center;
+            height: 10rem;
+            padding: 1.5rem 1.5rem;
+            margin: 20vh auto;
+            border: 1px solid black;
+            max-width: 30rem;
+        }
+        input{
+            height: 2.5rem;
+            font-weight: 600;
+        }
+        .answer{
+            padding-left: .3rem;
+            display: flex;
+            align-items: center;
+            height: 2.7rem;
+            width: 13rem;
+            font-weight: 600;
+            border: 1px solid rgb(145, 145, 145);
+            margin: .1rem 0 0 0;
+        }
+        .equals{
+            margin: .5rem;
+            font-size: 2rem;
+        }
+        .button-div{
+            display: flex;
+            flex-direction: column;
+        }
+        /* .fahrenheit-btn:hover, .celsius-btn:hover, .kelvin-btn:hover,
+        .fahrenheit-btn-2:hover, .celsius-btn-2:hover, .kelvin-btn-2:hover{
+            background-color: grey;
+            cursor: pointer;
+        }
+        .fahrenheit-btn:active, .celsius-btn:active, .kelvin-btn:active,
+        .fahrenheit-btn-2:active, .celsius-btn-2:active, .kelvin-btn-2:active{
+           background-color:rgb(102, 102, 102);
+        } */
+        .fahrenheit-btn, .celsius-btn, .kelvin-btn,
+        .fahrenheit-btn-2, .celsius-btn-2, .kelvin-btn-2{
+            height: 1.7rem;
+            border: 1px solid black;
+            background-color:lightgray;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-wrapper">
+        
+        <div class="input-boxes" id="input-box-1">
+            <input id="fahrenheit" type="text">
+
+            <div class="button-div">
+                <button class="fahrenheit-btn">Fahrenheit</button>
+            </div>
+        </div>
+        <p class="equals">=</p>
+        <div class="input-boxes" id="input-box-2">
+            <p class="answer" id="celsius"></p>
+
+            <div class="button-div">
+                <button class="celsius-btn">Degree Celsius</button>
+            </div>
+        </div>
+
+
+        <script>
+            const fahrenheitBtn = document.querySelector(".fahrenheit-btn");
+            const celsiusBtn = document.querySelector(".celsius-btn"); 
+
+            const calcBtn = document.querySelector("#calc-btn");
+            const fahrenheitInput = document.querySelector("#fahrenheit");
+            const celsiusInput = document.querySelector("#celsius");
+            
+            
+            fahrenheitInput.addEventListener("input", function(){
+                function FaToCe(){
+                return (fahrenheitValue - 32) * 5/9;
+                }
+
+                let fahrenheitValue = fahrenheitInput.value;
+
+                if (fahrenheitValue !== "") {
+                    celsiusInput.textContent = FaToCe(); 
+                } else {
+                    celsiusInput.innerText = "";
+                }   
+                
+            })
+        
+            
+            
+          
+        </script>
+    </main>
+</body>
+</html>
