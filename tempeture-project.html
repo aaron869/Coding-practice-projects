@@ -36,21 +36,22 @@
             display: flex;
             flex-direction: column;
         }
-        /* .fahrenheit-btn:hover, .celsius-btn:hover, .kelvin-btn:hover,
-        .fahrenheit-btn-2:hover, .celsius-btn-2:hover, .kelvin-btn-2:hover{
+        .fahrenheit-btn:hover, .celsius-btn:hover, .kelvin-btn:hover,
+        .fahrenheit-btn-2:hover, .celsius-btn-1:hover, .kelvin-btn-2:hover{
             background-color: grey;
             cursor: pointer;
         }
         .fahrenheit-btn:active, .celsius-btn:active, .kelvin-btn:active,
-        .fahrenheit-btn-2:active, .celsius-btn-2:active, .kelvin-btn-2:active{
+        .fahrenheit-btn-2:active, .celsius-btn-1:active, .kelvin-btn-2:active{
            background-color:rgb(102, 102, 102);
-        } */
+        }
         .fahrenheit-btn, .celsius-btn, .kelvin-btn,
-        .fahrenheit-btn-2, .celsius-btn-2, .kelvin-btn-2{
+        .fahrenheit-btn-2, .celsius-btn-1, .kelvin-btn-2{
             height: 1.7rem;
             border: 1px solid black;
             background-color:lightgray;
         }
+        
     </style>
 </head>
 <body>
@@ -61,6 +62,8 @@
 
             <div class="button-div">
                 <button class="fahrenheit-btn">Fahrenheit</button>
+                <button class="celsius-btn-1">Degree Celsius</button>
+                <button class="kelvin-btn">kelvin</button>
             </div>
         </div>
         <p class="equals">=</p>
@@ -75,14 +78,17 @@
 
         <script>
             const fahrenheitBtn = document.querySelector(".fahrenheit-btn");
-            const celsiusBtn = document.querySelector(".celsius-btn"); 
+            const celsiusBtn1 = document.querySelector(".celsius-btn-1"); 
+            const kelvinBtn = document.querySelector(".kelvin-btn");
 
             const calcBtn = document.querySelector("#calc-btn");
             const fahrenheitInput = document.querySelector("#fahrenheit");
             const celsiusInput = document.querySelector("#celsius");
-            
-            
-            fahrenheitInput.addEventListener("input", function(){
+
+
+            // button section
+            fahrenheitBtn.addEventListener("click", function(){
+                fahrenheitInput.addEventListener("input", function(){
                 function FaToCe(){
                 return (fahrenheitValue - 32) * 5/9;
                 }
@@ -94,8 +100,28 @@
                 } else {
                     celsiusInput.innerText = "";
                 }   
-                
             })
+            })
+
+            // kelvinBtn.addEventListener("click", function(){
+            //     fahrenheitInput.addEventListener("input", function(){
+            //     function keToCe(){
+            //     return kelvinValue - 273.15;
+            //     }
+
+            //     let kelvinValue = fahrenheitInput.value;
+
+            //     if (kevlinValue !== "") {
+            //         celsiusInput.textContent = keToCe(); 
+            //     } else {
+            //         celsiusInput.innerText = "";
+            //     }   
+            // })
+            // })
+
+
+
+            
         
             
             
