@@ -55,15 +55,18 @@
     </style>
 </head>
 <body>
+
     <main class="main-wrapper">
         
         <div class="input-boxes" id="input-box-1">
             <input id="fahrenheit" type="text">
 
             <div class="button-div">
-                <button class="fahrenheit-btn">Fahrenheit</button>
-                <button class="celsius-btn-1">Degree Celsius</button>
-                <button class="kelvin-btn">kelvin</button>
+                <select name="" id="">
+                    <option value="fahrenheit"><button class="fahrenheit-btn">Fahrenheit</button></option>
+                    <option value="celsius"><button class="celsius-btn-1">Degree Celsius</button></option><button class="celsius-btn-1">Degree Celsius</button>
+                    <option value="kelvin"><button class="kelvin-btn">kelvin</button></option>
+                </select>
             </div>
         </div>
         <p class="equals">=</p>
@@ -87,7 +90,7 @@
 
 
             // button section
-            fahrenheitBtn.addEventListener("click", function(){
+            
                 fahrenheitInput.addEventListener("input", function(){
                 function FaToCe(){
                 return (fahrenheitValue - 32) * 5/9;
@@ -101,7 +104,7 @@
                     celsiusInput.innerText = "";
                 }   
             })
-            })
+    
 
             // kelvinBtn.addEventListener("click", function(){
             //     fahrenheitInput.addEventListener("input", function(){
