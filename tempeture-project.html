@@ -59,7 +59,7 @@
     <main class="main-wrapper">
         
         <div class="input-boxes" id="input-box-1">
-            <input id="fahrenheit" type="text">
+            <input id="main-input" type="text">
 
             <div class="button-div">
                 <select name="" id="">
@@ -69,7 +69,7 @@
                 </select>
             </div>
         </div>
-        <p class="equals">=</p>
+        <p class="equals">=</p> 
         <div class="input-boxes" id="input-box-2">
             <p class="answer" id="celsius"></p>
 
@@ -85,18 +85,18 @@
             const kelvinBtn = document.querySelector(".kelvin-btn");
 
             const calcBtn = document.querySelector("#calc-btn");
-            const fahrenheitInput = document.querySelector("#fahrenheit");
+            const mainInput = document.querySelector("#main-input");
             const celsiusInput = document.querySelector("#celsius");
 
 
             // button section
             
-                fahrenheitInput.addEventListener("input", function(){
+                mainInput.addEventListener("input", function(){
                 function FaToCe(){
                 return (fahrenheitValue - 32) * 5/9;
                 }
 
-                let fahrenheitValue = fahrenheitInput.value;
+                let fahrenheitValue = mainInput.value;
 
                 if (fahrenheitValue !== "") {
                     celsiusInput.textContent = FaToCe(); 
