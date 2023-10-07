@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .main-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            width: 18rem;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+        }
+        .output{
+            display: flex;
+            align-items: center;justify-content: flex-end;
+            background-color: black;
+            color: white;
+            font-size: 3rem;
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            max-width: 17rem;
+            padding-right: 1rem;
+            height: 5rem;
+            margin: 0;
+        }
+        .btn-div{
+            display: grid;
+            grid-template-columns: repeat(4, 4.5rem) ; 
+            grid-template-rows: repeat(5, 3.5rem);
+        }
+        #zero{
+            grid-column: span 2;
+        }
+        button{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>calculator</h1>
+
+    <main class="main-wrapper">
+        <p class="output"></p>
+        <div class="btn-div">
+            <button class="delete-btn">AC</button>
+            <button class="neg-btn">+/-</button>
+            <button>%</button>
+            <button>➗</button>
+            <button class="num-btn">7</button>
+            <button class="num-btn">8</button>
+            <button class="num-btn">9</button>
+            <button>x</button>
+            <button class="num-btn">4</button>
+            <button class="num-btn">5</button>
+            <button class="num-btn">6</button>
+            <button>-</button>
+            <button class="num-btn">1</button>
+            <button class="num-btn">2</button>
+            <button class="num-btn">3</button>
+            <button>+</button>
+            <button class="num-btn" id="zero">0</button>
+            <button class="decimal-btn">.</button>
+            <button>=</button>
+        </div>
+    </main>
+    
+</body>
+<script>
+    const numBtn = document.querySelectorAll(".num-btn");
+    const deleteBtn = document.querySelector(".delete-btn");
+    const negativeBtn = document.querySelector(".neg-btn");
+    const decimalBtn = document.querySelector(".decimal-btn");
+    let output = document.querySelector(".output");
+    
+    
+    // number buttons
+    numBtn.forEach(numBtn => {
+        numBtn.addEventListener("click", function(){
+            let numValue = numBtn.innerText;
+            output.append(numValue);
+    })    
+    }); 
+    // delete button
+    deleteBtn.addEventListener("click", function(){
+        output.innerText = "";
+    })
+    // decimal button
+    decimalBtn.addEventListener("click", function(){
+        if (!output.innerText.includes(".")) 
+            output.append("."); 
+        // } else {
+        //     console.log("nope");
+        // }
+    })
+    // negative & positive button
+    // negativeBtn.addEventListener("click", function(){
+    //     if ( output.innerText > 0) {
+    //         output
+    //     } else {
+
+    //     }
+    // })
+</script>
+</html>
