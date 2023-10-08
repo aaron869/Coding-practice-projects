@@ -47,14 +47,13 @@
 </head>
 <body>
     <h1>calculator</h1>
-
     <main class="main-wrapper">
         <p class="output"></p>
         <div class="btn-div">
             <button class="delete-btn">AC</button>
             <button class="neg-btn">+/-</button>
-            <button>%</button>
-            <button>➗</button>
+            <button class="fraction-btn">%</button>
+            <button class="divide-btn">➗</button>
             <button class="num-btn">7</button>
             <button class="num-btn">8</button>
             <button class="num-btn">9</button>
@@ -79,8 +78,11 @@
     const deleteBtn = document.querySelector(".delete-btn");
     const negativeBtn = document.querySelector(".neg-btn");
     const decimalBtn = document.querySelector(".decimal-btn");
+    const fractionBtn = document.querySelector(".fraction-btn");
+    const divideBtn = document.querySelector(".divide-btn");
     let output = document.querySelector(".output");
-    
+
+   
     
     // number buttons
     numBtn.forEach(numBtn => {
@@ -95,16 +97,29 @@
     })
     // decimal button
     decimalBtn.addEventListener("click", function(){
+      
         if (!output.innerText.includes(".")) 
             output.append("."); 
     })
+    // fraction button 
+    fractionBtn.addEventListener("click", function(){
+        let currentNum = parseFloat(output.innerText);
+        let decNum = currentNum / 100;
+        output.innerText = decNum;
+    })
     // negative & positive button
-    // negativeBtn.addEventListener("click", function(){
-    //     if ( output.innerText > 0) {
-    //         output
-    //     } else {
-
-    //     }
+    negativeBtn.addEventListener("click", function(){
+        if (!output.innerText.includes("-")) {
+            "-"  + output.innerText; 
+        } else if (output.innerText.includes("-")){
+           
+        }
+            
+    })
+  
+    // // divide button 
+    // divideBtn.addEventListener("click", function(){
+       
     // })
 </script>
 </html>
