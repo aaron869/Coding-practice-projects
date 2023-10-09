@@ -49,25 +49,27 @@
    
     <h1>calculator</h1>
     <main class="main-wrapper">
-       <input id="output" type="text" readonly>
+        <p id="output"></p>
         <div class="btn-div">
-            <button>AC</button>
-            <button>+/-</button>
-            <button>%</button>
+            <button class="delete-btn">AC</button>
+            <button class="neg-btn">+/-</button>
+            <button class="fraction-btn">%</button>
             <button onclick="output.append('/');">/</button>
-            <button onclick="append("");">7</button>
-            <button onclick="append("");">8</button>
-            <button onclick="append("");">9</button>
-            <button onclick="append("");">*</button>
-            <button onclick="append("");">4</button>
-            <button onclick="append("");">5</button>
-            <button onclick="append("");">6</button>
-            <button onclick="append("");">-</button>
-            <button onclick="append("");">1</button>
-            <button onclick="append("");">2</button>
-            <button onclick="append("");">3</button>
-            <button onclick="append("");">+</button>
-            <button id="zero">0</button>
+            <button class="num-btn" onclick="output.append('7');">7</button>
+            <button class="num-btn" onclick="output.append('8');">8</button>
+            <button class="num-btn" onclick="output.append('9');">9</button>
+            <button onclick="output.append('*');">*</button>
+            <button class="num-btn" onclick="output.append('4');">4</button>
+            <button class="num-btn" onclick="output.append('5');">5</button>
+            <button class="num-btn" onclick="output.append('6');">6</button>
+            <button onclick="output.append('-');">-</button>
+            <button class="num-btn" onclick="output.append('1');">1</button>
+            <button class="num-btn" onclick="output.append('2');">2</button>
+            <button class="num-btn" onclick="output.append('3');">3</button>
+            <button class="add-btn" onclick="output.append('+');">+</button>
+            <button class="num-btn" id="zero" onclick="output.append('0');">0</button>
+            <button class="decimal-btn">.</button>
+            <button class="equal-btn">=</button>
         </div>
     </main>
     
@@ -79,20 +81,13 @@
     const decimalBtn = document.querySelector(".decimal-btn");
     const fractionBtn = document.querySelector(".fraction-btn");
     const divideBtn = document.querySelector(".divide-btn");
+    const equalBtn = document.querySelector(".equal-btn");
     const addBtn = document.querySelector(".add-btn");
     let output = document.querySelector("#output");
    
 
    
-    
-    // number buttons
-    numBtn.forEach(numBtn => {
-        numBtn.addEventListener("click", function(){
 
-            let numValue = numBtn.innerText;
-            output.append(numValue);
-    })    
-    }); 
     // delete button
     deleteBtn.addEventListener("click", function(){
         output.innerText = "";
@@ -109,29 +104,21 @@
         let decNum = currentNum / 100;
         output.innerText = decNum;
     })
-    // // negative & positive button
-    // negativeBtn.addEventListener("click", function(){
-    //     if (!output.innerText.includes("-")) {
-    //         "-"  + output.innerText;
-    //     }
-           
-    //     // } else if (output.innerText.includes("-")){
-           
-    //     // }
-   // })
-    // add button 
-    addBtn.addEventListener("click", function(){
-        let  outputOne = '';
-        let outputTwo = '';
-        outputOne = output.innerText;
-        output.innerText = '';
-        outputTwo = output.innerText;
-        let answer = parseFloat(outputOne) + parseFloat(outputTwo);
-        console.log(answer);
-    })
-    // // divide button 
-    // divideBtn.addEventListener("click", function(){
-       
-    // })
+    // equal button
+    equalBtn.addEventListener("click", function(){
+      let outputText = output.innerText;
+      output.innerText = eval(outputText);
+  })
+
+    // negative & positive button
+    negativeBtn.addEventListener("click", function(){
+        if (!output.innerText.includes("-")) {
+            output.innerText = '-' + output.innerText;
+        } else if (output.innerText.includes("-")){
+            output.innerText = output.innerText.slice(1);
+        }
+   })
+
+  
 </script>
 </html>
