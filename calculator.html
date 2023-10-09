@@ -19,7 +19,7 @@
         h1{
             text-align: center;
         }
-        .output{
+        #output{
             display: flex;
             align-items: center;justify-content: flex-end;
             background-color: black;
@@ -46,29 +46,28 @@
     </style>
 </head>
 <body>
+   
     <h1>calculator</h1>
     <main class="main-wrapper">
-        <p class="output"></p>
+       <input id="output" type="text" readonly>
         <div class="btn-div">
-            <button class="delete-btn">AC</button>
-            <button class="neg-btn">+/-</button>
-            <button class="fraction-btn">%</button>
-            <button class="divide-btn">➗</button>
-            <button class="num-btn">7</button>
-            <button class="num-btn">8</button>
-            <button class="num-btn">9</button>
-            <button>x</button>
-            <button class="num-btn">4</button>
-            <button class="num-btn">5</button>
-            <button class="num-btn">6</button>
-            <button>-</button>
-            <button class="num-btn">1</button>
-            <button class="num-btn">2</button>
-            <button class="num-btn">3</button>
-            <button>+</button>
-            <button class="num-btn" id="zero">0</button>
-            <button class="decimal-btn">.</button>
-            <button>=</button>
+            <button>AC</button>
+            <button>+/-</button>
+            <button>%</button>
+            <button onclick="output.append('/');">/</button>
+            <button onclick="append("");">7</button>
+            <button onclick="append("");">8</button>
+            <button onclick="append("");">9</button>
+            <button onclick="append("");">*</button>
+            <button onclick="append("");">4</button>
+            <button onclick="append("");">5</button>
+            <button onclick="append("");">6</button>
+            <button onclick="append("");">-</button>
+            <button onclick="append("");">1</button>
+            <button onclick="append("");">2</button>
+            <button onclick="append("");">3</button>
+            <button onclick="append("");">+</button>
+            <button id="zero">0</button>
         </div>
     </main>
     
@@ -80,13 +79,16 @@
     const decimalBtn = document.querySelector(".decimal-btn");
     const fractionBtn = document.querySelector(".fraction-btn");
     const divideBtn = document.querySelector(".divide-btn");
-    let output = document.querySelector(".output");
+    const addBtn = document.querySelector(".add-btn");
+    let output = document.querySelector("#output");
+   
 
    
     
     // number buttons
     numBtn.forEach(numBtn => {
         numBtn.addEventListener("click", function(){
+
             let numValue = numBtn.innerText;
             output.append(numValue);
     })    
@@ -107,16 +109,26 @@
         let decNum = currentNum / 100;
         output.innerText = decNum;
     })
-    // negative & positive button
-    negativeBtn.addEventListener("click", function(){
-        if (!output.innerText.includes("-")) {
-            "-"  + output.innerText; 
-        } else if (output.innerText.includes("-")){
+    // // negative & positive button
+    // negativeBtn.addEventListener("click", function(){
+    //     if (!output.innerText.includes("-")) {
+    //         "-"  + output.innerText;
+    //     }
            
-        }
-            
+    //     // } else if (output.innerText.includes("-")){
+           
+    //     // }
+   // })
+    // add button 
+    addBtn.addEventListener("click", function(){
+        let  outputOne = '';
+        let outputTwo = '';
+        outputOne = output.innerText;
+        output.innerText = '';
+        outputTwo = output.innerText;
+        let answer = parseFloat(outputOne) + parseFloat(outputTwo);
+        console.log(answer);
     })
-  
     // // divide button 
     // divideBtn.addEventListener("click", function(){
        
