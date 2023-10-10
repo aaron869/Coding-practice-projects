@@ -20,6 +20,13 @@
             padding: 1rem;
             width: 22rem;
         }
+        .calculate-btn:hover{
+            cursor: pointer;
+            background-color: rgb(179, 0, 0);
+        }
+        .calculate-btn:active{
+            background-color: rgb(211, 2, 2);
+        }
         .calculate-btn{
             font-size:1.5rem;
             background-color: rgb(211, 2, 2);
@@ -47,7 +54,7 @@
         <div class="tophalf">
             <h2>Tip Calculator</h2>
             <p>How much was you bill?</p>
-            <label class="bill">$</label><input type="text">
+            <label class="bill">$</label><input id="bill-input" type="text">
             <p>How was your service?</p>
             <select name="service" id="service-select">
                 <option value="30">30% - outstanding</option>
@@ -57,17 +64,39 @@
                 <option value="5">5% - terrible</option>
             </select>
             <p>How many people are sharing the bill?</p>
-            <input type="text"><label class="people" for="people">People</label>
+            <input id="people-input" type="text"><label class="people" for="people">People</label>
         </div>
 
         <div class="bottom-half">
         <button class="calculate-btn">CALCULATE!</button>
 
         <p>Tip Amount</p>
-        <p>$</p>
+        <p class="tip-output">$</p>
         <p>each</p>
         </div>
 
     </main>
+
+    <script>
+        const billInput = document.querySelector("#bill-input");
+        const tipOutput = document.querySelector(".tip-output");
+        const peopleInput = document.querySelector("#people-input");
+        const calulateBtn = document.querySelector(".calculate-btn");
+        const serviceAmount = document.querySelector("#service-select");
+
+        
+        console.log(peopleInput.value);
+        calulateBtn.addEventListener("click", function(){
+            if (billInput.value === "" || peopleInput.value === ""){
+            alert('fill out all inputs');
+            } 
+
+            let stepOne = billInput.value / 100;
+            let stepTwo =  stepOne * serviceAmount.value;
+            let TPP = stepTwo/peopleInput.value;
+            tipOutput.innerText = '$' + TPP.toFixed(2);
+        })
+       
+    </script>
 </body>
 </html>
