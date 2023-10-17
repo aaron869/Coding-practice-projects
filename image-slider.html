@@ -7,15 +7,17 @@
 </head>
 <body>
     <main class="wrapper">
-        <button>﹥</button>
+        <button class="right-btn">﹥</button>
         <div class="img-div">
             <img src="images/4th-pic.webp" alt="img" width="600" height="350">
         </div>
-        <button>﹤</button>
+        <button class="left-btn">﹤</button>
     </main>
     <script>
         const imgDiv = document.querySelector(".img-div");
-        
+        const leftBtn = document.querySelector(".left-btn");
+        const rightBtn = document.querySelector(".right-btn");
+
         const images = [
             {
                 
